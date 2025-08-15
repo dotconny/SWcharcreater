@@ -1,0 +1,900 @@
+[gd_scene load_steps=42 format=3 uid="uid://wsa4b8n6unaa"]
+
+[ext_resource type="Script" path="res://mindroll.gd" id="1_jg5kn"]
+[ext_resource type="Script" path="res://mind.gd" id="1_rdhab"]
+[ext_resource type="Script" path="res://h_box_container.gd" id="1_s28se"]
+[ext_resource type="Script" path="res://atk.gd" id="1_tr2ym"]
+[ext_resource type="Script" path="res://species_option.gd" id="2_8l4ia"]
+[ext_resource type="Script" path="res://Level.gd" id="3_rm38h"]
+[ext_resource type="Script" path="res://the attributes/minus counter/decrease.gd" id="3_wfgfa"]
+[ext_resource type="Script" path="res://body.gd" id="4_2fn0q"]
+[ext_resource type="Script" path="res://Attributes.gd" id="4_o1irc"]
+[ext_resource type="Script" path="res://body_roller.gd" id="5_3sijt"]
+[ext_resource type="Script" path="res://soul.gd" id="5_4xw43"]
+[ext_resource type="Script" path="res://int.gd" id="5_ugrv5"]
+[ext_resource type="Script" path="res://APs.gd" id="5_vggr7"]
+[ext_resource type="Script" path="res://the attributes/plus counter/wis.gd" id="7_1ahva"]
+[ext_resource type="Script" path="res://soul roller.gd" id="7_mltq4"]
+[ext_resource type="Script" path="res://the attributes/plus counter/prc.gd" id="8_1oxic"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dwis.gd" id="8_fr5ea"]
+[ext_resource type="Script" path="res://the attributes/plus counter/stlth.gd" id="9_2wcj1"]
+[ext_resource type="Script" path="res://the attributes/minus counter/prcd.gd" id="10_0jxjj"]
+[ext_resource type="Script" path="res://the attributes/plus counter/prs.gd" id="10_sia5r"]
+[ext_resource type="Script" path="res://the attributes/plus counter/cha.gd" id="11_viuep"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dstl.gd" id="12_4hgqn"]
+[ext_resource type="Script" path="res://hp.gd" id="12_5rhil"]
+[ext_resource type="Script" path="res://lp.gd" id="13_lxxqs"]
+[ext_resource type="Script" path="res://bd.gd" id="14_7g1rr"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dprs.gd" id="14_jhh6f"]
+[ext_resource type="Script" path="res://the attributes/plus counter/str.gd" id="14_v04ha"]
+[ext_resource type="Script" path="res://i_ps.gd" id="15_448ak"]
+[ext_resource type="Script" path="res://the attributes/plus counter/ath.gd" id="15_xcans"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dcha.gd" id="16_4fqje"]
+[ext_resource type="Script" path="res://the attributes/plus counter/hlth.gd" id="16_7366t"]
+[ext_resource type="Script" path="res://cc.gd" id="16_cwm42"]
+[ext_resource type="Script" path="res://the attributes/plus counter/fth.gd" id="19_8opjw"]
+[ext_resource type="Script" path="res://the attributes/plus counter/mgc.gd" id="20_1mij2"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dstr.gd" id="20_03hns"]
+[ext_resource type="Script" path="res://the attributes/plus counter/life.gd" id="21_m60hr"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dath.gd" id="22_mmquv"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dhlth.gd" id="24_1bw3c"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dfth.gd" id="28_ignpt"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dmgc.gd" id="30_1iyx6"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dlife.gd" id="32_13ovf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -580.0
+offset_right = 580.0
+offset_bottom = 237.0
+grow_horizontal = 2
+theme_override_constants/separation = 100
+script = ExtResource("1_tr2ym")
+
+[node name="stats" type="HBoxContainer" parent="NinePatchRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Mind" type="VBoxContainer" parent="NinePatchRect/VBoxContainer/stats"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Mind"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("1_jg5kn")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer"]
+layout_mode = 2
+text = "Mind:"
+
+[node name="Mind" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+script = ExtResource("1_rdhab")
+
+[node name="Mind d20" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="Mind Roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer"]
+layout_mode = 2
+
+[node name="int" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Mind"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("1_s28se")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/int"]
+layout_mode = 2
+text = "int:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/int"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/int" groups=["IncreaseMind", "PLUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("5_ugrv5")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/int" groups=["DecreaseMind", "MINUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("3_wfgfa")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/int"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/int"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/int"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/int"]
+layout_mode = 2
+
+[node name="wis" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Mind"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("1_s28se")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/wis"]
+layout_mode = 2
+text = "wis:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/wis"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/wis" groups=["IncreaseMind", "PLUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("7_1ahva")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/wis" groups=["DecreaseMind", "MINUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("8_fr5ea")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/wis"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/wis"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/wis"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/wis"]
+layout_mode = 2
+
+[node name="prc" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Mind"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("1_s28se")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prc"]
+layout_mode = 2
+text = "prc:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prc"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/prc" groups=["IncreaseMind", "PLUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("8_1oxic")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/prc" groups=["DecreaseMind", "MINUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("10_0jxjj")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/prc"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prc"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prc"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prc"]
+layout_mode = 2
+
+[node name="stl" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Mind"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("1_s28se")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/stl"]
+layout_mode = 2
+text = "stl:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/stl"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/stl" groups=["IncreaseMind", "PLUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("9_2wcj1")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/stl" groups=["DecreaseMind", "MINUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("12_4hgqn")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/stl"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/stl"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/stl"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/stl"]
+layout_mode = 2
+
+[node name="prs" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Mind"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("1_s28se")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prs"]
+layout_mode = 2
+text = "prs:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prs"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/prs" groups=["IncreaseMind", "PLUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("10_sia5r")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/prs" groups=["DecreaseMind", "MINUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("14_jhh6f")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/prs"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prs"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prs"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prs"]
+layout_mode = 2
+
+[node name="cha" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Mind"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("1_s28se")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/cha"]
+layout_mode = 2
+text = "cha:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/cha"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/cha" groups=["IPmod", "IncreaseMind", "PLUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("11_viuep")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/cha" groups=["DecreaseMind", "MINUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("16_4fqje")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/cha"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/cha"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/cha"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/cha"]
+layout_mode = 2
+
+[node name="Body" type="VBoxContainer" parent="NinePatchRect/VBoxContainer/stats"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Body"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("5_3sijt")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer"]
+layout_mode = 2
+text = "Body:"
+
+[node name="Body" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+script = ExtResource("4_2fn0q")
+
+[node name="Body d20" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="roll result" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="Label3" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer"]
+layout_mode = 2
+
+[node name="str" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Body"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("1_s28se")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/str"]
+layout_mode = 2
+text = "str:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/str"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/str" groups=["IncreaseBody", "PLUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("14_v04ha")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/str" groups=["DecreaseBody", "MINUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("20_03hns")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/str"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/str"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/str"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/str"]
+layout_mode = 2
+
+[node name="ath" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Body"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("1_s28se")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/ath"]
+layout_mode = 2
+text = "ath:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/ath"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/ath" groups=["IncreaseBody", "PLUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("15_xcans")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/ath" groups=["DecreaseBody", "MINUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("22_mmquv")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/ath"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/ath"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/ath"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/ath"]
+layout_mode = 2
+
+[node name="hlth" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Body"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("1_s28se")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/hlth"]
+layout_mode = 2
+text = "Hlth:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/hlth"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/hlth" groups=["HPmod", "IncreaseBody", "PLUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("16_7366t")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/hlth" groups=["DecreaseBody", "MINUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("24_1bw3c")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/hlth"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/hlth"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/hlth"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/hlth"]
+layout_mode = 2
+
+[node name="Soul" type="VBoxContainer" parent="NinePatchRect/VBoxContainer/stats"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Soul"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("7_mltq4")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer"]
+layout_mode = 2
+text = "Soul:"
+
+[node name="Soul" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer"]
+custom_minimum_size = Vector2(77, 0)
+layout_mode = 2
+script = ExtResource("5_4xw43")
+
+[node name="Button" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer"]
+layout_mode = 2
+text = "roll!"
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="Label3" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer"]
+layout_mode = 2
+
+[node name="fth" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Soul"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("1_s28se")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/fth"]
+layout_mode = 2
+text = "fth:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/fth"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/fth" groups=["IncreaseSoul", "PLUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("19_8opjw")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/fth" groups=["DecreaseSoul", "MINUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("28_ignpt")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/fth"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/fth"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/fth"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/fth"]
+layout_mode = 2
+
+[node name="mgc" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Soul"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("1_s28se")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc"]
+layout_mode = 2
+text = "mgc:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc" groups=["IncreaseSoul", "PLUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("20_1mij2")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc" groups=["DecreaseSoul", "MINUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("30_1iyx6")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc"]
+layout_mode = 2
+
+[node name="life" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Soul"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("1_s28se")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/life"]
+layout_mode = 2
+text = "Life:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/life"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/life" groups=["BDmod", "IncreaseSoul", "LPmod", "PLUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("21_m60hr")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/life" groups=["DecreaseSoul", "MINUS"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("32_13ovf")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/life"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/life"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/life"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/life"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Species" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species"]
+layout_mode = 2
+text = "Species: (Warning: One Time Decision)"
+
+[node name="SpeciesOption" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species"]
+layout_mode = 2
+item_count = 13
+popup/item_0/text = "Human"
+popup/item_1/text = "Witchling"
+popup/item_1/id = 1
+popup/item_2/text = "Hunteses"
+popup/item_2/id = 2
+popup/item_3/text = "Nymph"
+popup/item_3/id = 3
+popup/item_4/text = "Animalias"
+popup/item_4/id = 4
+popup/item_5/text = "Construct"
+popup/item_5/id = 5
+popup/item_6/text = "Demonica"
+popup/item_6/id = 6
+popup/item_7/text = "Angelica"
+popup/item_7/id = 7
+popup/item_8/text = "Witches"
+popup/item_8/id = 8
+popup/item_9/text = "Undead"
+popup/item_9/id = 9
+popup/item_10/text = "Scavegers"
+popup/item_10/id = 10
+popup/item_11/text = "Husk"
+popup/item_11/id = 11
+popup/item_12/text = "Fibrosian"
+popup/item_12/id = 12
+script = ExtResource("2_8l4ia")
+
+[node name="Domain" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain"]
+layout_mode = 2
+text = "Domain: (Warning: One Time Decision)"
+
+[node name="DomainOption" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "Warrior Spirit"
+popup/item_1/text = "Assassin"
+popup/item_1/id = 1
+popup/item_2/text = "Godless Preacher"
+popup/item_2/id = 2
+script = ExtResource("2_8l4ia")
+
+[node name="LV" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("3_rm38h")
+
+[node name="LV Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV"]
+layout_mode = 2
+text = "LV:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV"]
+layout_mode = 2
+text = "1"
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV" groups=["BDmod", "HPmod", "IPmod", "LPmod"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+
+[node name="HP" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("12_5rhil")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/HP"]
+layout_mode = 2
+text = "HP:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/HP"]
+layout_mode = 2
+
+[node name="LP" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("13_lxxqs")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LP"]
+layout_mode = 2
+text = "LP:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LP"]
+layout_mode = 2
+
+[node name="BD" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("14_7g1rr")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BD"]
+layout_mode = 2
+text = "BD:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BD"]
+layout_mode = 2
+
+[node name="IPs" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("15_448ak")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/IPs"]
+layout_mode = 2
+text = "IPs:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/IPs"]
+layout_mode = 2
+
+[node name="CC" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("16_cwm42")
+
+[node name="nm" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/CC"]
+layout_mode = 2
+text = "CC:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/CC"]
+layout_mode = 2
+
+[node name="ATK" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/ATK"]
+layout_mode = 2
+text = "ATK bonus:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/ATK"]
+layout_mode = 2
+
+[node name="Attributes" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("4_o1irc")
+
+[node name="AP Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Attributes"]
+layout_mode = 2
+text = "Attributes: "
+
+[node name="APs" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Attributes"]
+layout_mode = 2
+text = "0"
+script = ExtResource("5_vggr7")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind d20" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" method="_on_mind_d_20_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/int/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/int/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/int" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/int/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/int/Increase" method="_on_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/int/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/int/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/int" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/int/roll" to="NinePatchRect/VBoxContainer/stats/Mind/int" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/wis/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/wis/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/wis" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/wis/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/wis/Increase" method="_on_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/wis/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/wis/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/wis" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/wis/roll" to="NinePatchRect/VBoxContainer/stats/Mind/wis" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prc/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prc/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/prc" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prc/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/prc/Increase" method="_on_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prc/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prc/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/prc" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prc/roll" to="NinePatchRect/VBoxContainer/stats/Mind/prc" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/stl/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/stl/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/stl" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/stl/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/stl/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/stl" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/stl/roll" to="NinePatchRect/VBoxContainer/stats/Mind/stl" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prs/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prs/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/prs" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prs/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prs/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/prs" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prs/roll" to="NinePatchRect/VBoxContainer/stats/Mind/prs" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/cha/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/cha/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/cha" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/cha/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/cha/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/cha" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/cha/roll" to="NinePatchRect/VBoxContainer/stats/Mind/cha" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer/Body d20" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" method="_on_body_d_20_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer/Body d20" to="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer" method="_on_body_d_20_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/str/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/str/Increase" to="NinePatchRect/VBoxContainer/stats/Body/str" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/str/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/str/Decrease" to="NinePatchRect/VBoxContainer/stats/Body/str" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/str/roll" to="NinePatchRect/VBoxContainer/stats/Body/str" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/ath/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/ath/Increase" to="NinePatchRect/VBoxContainer/stats/Body/ath" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/ath/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/ath/Decrease" to="NinePatchRect/VBoxContainer/stats/Body/ath" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/ath/roll" to="NinePatchRect/VBoxContainer/stats/Body/ath" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/hlth/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/hlth/Increase" to="NinePatchRect/VBoxContainer/stats/Body/hlth" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/hlth/Increase" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/HP" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/hlth/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/hlth/Decrease" to="NinePatchRect/VBoxContainer/stats/Body/hlth" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/hlth/roll" to="NinePatchRect/VBoxContainer/stats/Body/hlth" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer/Button" to="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer" method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/fth/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/fth/Increase" to="NinePatchRect/VBoxContainer/stats/Soul/fth" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/fth/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/fth/Decrease" to="NinePatchRect/VBoxContainer/stats/Soul/fth" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/fth/roll" to="NinePatchRect/VBoxContainer/stats/Soul/fth" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/mgc/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/mgc/Increase" to="NinePatchRect/VBoxContainer/stats/Soul/mgc" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/mgc/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/mgc/Decrease" to="NinePatchRect/VBoxContainer/stats/Soul/mgc" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/mgc/roll" to="NinePatchRect/VBoxContainer/stats/Soul/mgc" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/life/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/life/Increase" to="NinePatchRect/VBoxContainer/stats/Soul/life" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/life/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/life/Decrease" to="NinePatchRect/VBoxContainer/stats/Soul/life" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/life/roll" to="NinePatchRect/VBoxContainer/stats/Soul/life" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV/Increase" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV" method="_on_increase_pressed"]

@@ -1,0 +1,2096 @@
+[gd_scene load_steps=94 format=3 uid="uid://bir33fhpi1w3h"]
+
+[ext_resource type="Script" path="res://mindroll.gd" id="1_jg5kn"]
+[ext_resource type="Script" path="res://mind.gd" id="1_rdhab"]
+[ext_resource type="Script" path="res://atk.gd" id="1_tr2ym"]
+[ext_resource type="Script" path="res://species_option.gd" id="2_8l4ia"]
+[ext_resource type="Script" path="res://Level.gd" id="3_rm38h"]
+[ext_resource type="Script" path="res://the attributes/minus counter/decrease.gd" id="3_wfgfa"]
+[ext_resource type="Script" path="res://MINDAPs.gd" id="4_8dh38"]
+[ext_resource type="Script" path="res://Attributes.gd" id="4_o1irc"]
+[ext_resource type="Script" path="res://body_roller.gd" id="5_3sijt"]
+[ext_resource type="Script" path="res://soul.gd" id="5_4xw43"]
+[ext_resource type="Script" path="res://int.gd" id="5_ugrv5"]
+[ext_resource type="Script" path="res://APs.gd" id="5_vggr7"]
+[ext_resource type="Script" path="res://the attributes/plus counter/wis.gd" id="7_1ahva"]
+[ext_resource type="Script" path="res://intr.gd" id="7_bspcy"]
+[ext_resource type="Script" path="res://soul roller.gd" id="7_mltq4"]
+[ext_resource type="Script" path="res://the attributes/plus counter/prc.gd" id="8_1oxic"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dwis.gd" id="8_fr5ea"]
+[ext_resource type="Script" path="res://the attributes/plus counter/stlth.gd" id="9_2wcj1"]
+[ext_resource type="Script" path="res://the attributes/minus counter/prcd.gd" id="10_0jxjj"]
+[ext_resource type="Script" path="res://wisr.gd" id="10_032w0"]
+[ext_resource type="Script" path="res://the attributes/plus counter/prs.gd" id="10_sia5r"]
+[ext_resource type="Script" path="res://the attributes/plus counter/cha.gd" id="11_viuep"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dstl.gd" id="12_4hgqn"]
+[ext_resource type="Script" path="res://hp.gd" id="12_5rhil"]
+[ext_resource type="Script" path="res://prcr.gd" id="13_kb7v5"]
+[ext_resource type="Script" path="res://lp.gd" id="13_lxxqs"]
+[ext_resource type="Script" path="res://bd.gd" id="14_7g1rr"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dprs.gd" id="14_jhh6f"]
+[ext_resource type="Script" path="res://the attributes/plus counter/str.gd" id="14_v04ha"]
+[ext_resource type="Script" path="res://i_ps.gd" id="15_448ak"]
+[ext_resource type="Script" path="res://the attributes/plus counter/ath.gd" id="15_xcans"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dcha.gd" id="16_4fqje"]
+[ext_resource type="Script" path="res://the attributes/plus counter/hlth.gd" id="16_7366t"]
+[ext_resource type="Script" path="res://cc.gd" id="16_cwm42"]
+[ext_resource type="Script" path="res://stlr.gd" id="16_vql3l"]
+[ext_resource type="Script" path="res://the attributes/plus counter/fth.gd" id="19_8opjw"]
+[ext_resource type="Script" path="res://BODYAPs.gd" id="19_f8rip"]
+[ext_resource type="Script" path="res://prsr.gd" id="19_oituh"]
+[ext_resource type="Script" path="res://the attributes/plus counter/mgc.gd" id="20_1mij2"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dstr.gd" id="20_03hns"]
+[ext_resource type="Script" path="res://the attributes/plus counter/life.gd" id="21_m60hr"]
+[ext_resource type="Script" path="res://char.gd" id="22_72afv"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dath.gd" id="22_mmquv"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dhlth.gd" id="24_1bw3c"]
+[ext_resource type="Script" path="res://SOULAPs.gd" id="28_apn0x"]
+[ext_resource type="Script" path="res://strr.gd" id="28_e6g16"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dfth.gd" id="28_ignpt"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dmgc.gd" id="30_1iyx6"]
+[ext_resource type="Script" path="res://athr.gd" id="31_8r0nu"]
+[ext_resource type="Script" path="res://the attributes/minus counter/dlife.gd" id="32_13ovf"]
+[ext_resource type="Script" path="res://hlthr.gd" id="34_t1yyn"]
+[ext_resource type="Script" path="res://fthr.gd" id="39_gaofu"]
+[ext_resource type="Script" path="res://mgcr.gd" id="42_8gvf7"]
+[ext_resource type="Script" path="res://lifer.gd" id="45_lyidn"]
+[ext_resource type="Script" path="res://nymphssubtype.gd" id="46_deiln"]
+[ext_resource type="Script" path="res://walk.gd" id="46_g6yob"]
+[ext_resource type="Script" path="res://AAAAAAAA.gd" id="46_lj5l4"]
+[ext_resource type="Script" path="res://animaliasub.gd" id="47_2boj7"]
+[ext_resource type="Script" path="res://swim.gd" id="47_afb12"]
+[ext_resource type="Script" path="res://construct.gd" id="48_llmyb"]
+[ext_resource type="Script" path="res://climb.gd" id="48_sjoge"]
+[ext_resource type="Script" path="res://undead.gd" id="49_gbdgu"]
+[ext_resource type="Script" path="res://jump.gd" id="49_oyj3d"]
+[ext_resource type="Script" path="res://flight.gd" id="50_ernpc"]
+[ext_resource type="Script" path="res://construct_typing.gd" id="51_hx5v4"]
+[ext_resource type="Script" path="res://scaveger_mods.gd" id="51_x1lje"]
+[ext_resource type="Script" path="res://demonica_subspecies.gd" id="54_m018p"]
+[ext_resource type="Script" path="res://archangelica.gd" id="55_pu364"]
+[ext_resource type="Script" path="res://husk_bg.gd" id="56_boqus"]
+[ext_resource type="Script" path="res://backgrounds.gd" id="57_n1sej"]
+[ext_resource type="Script" path="res://fibrosian_stuffs.gd" id="57_uyqkd"]
+[ext_resource type="Script" path="res://domains.gd" id="58_vrsh8"]
+[ext_resource type="Script" path="res://scroll_container.gd" id="60_p4ehp"]
+[ext_resource type="Script" path="res://resistances.gd" id="74_okxwt"]
+[ext_resource type="Script" path="res://falling.gd" id="75_mp3co"]
+[ext_resource type="Script" path="res://drowning.gd" id="76_tl7sg"]
+[ext_resource type="Script" path="res://fire.gd" id="77_wmfxn"]
+[ext_resource type="Script" path="res://burning.gd" id="78_ositb"]
+[ext_resource type="Script" path="res://acid.gd" id="79_r2uoe"]
+[ext_resource type="Script" path="res://ice.gd" id="80_h4jn8"]
+[ext_resource type="Script" path="res://force.gd" id="81_40hu2"]
+[ext_resource type="Script" path="res://slashing.gd" id="82_5ytte"]
+[ext_resource type="Script" path="res://bleeding.gd" id="83_ug5wc"]
+[ext_resource type="Script" path="res://leech.gd" id="84_lvegr"]
+[ext_resource type="Script" path="res://electric.gd" id="85_2vt1g"]
+[ext_resource type="Script" path="res://necrotic.gd" id="86_qeko0"]
+[ext_resource type="Script" path="res://faith.gd" id="87_5f3n2"]
+[ext_resource type="Script" path="res://poison.gd" id="88_aar8w"]
+[ext_resource type="Script" path="res://psychic.gd" id="89_ptmk8"]
+[ext_resource type="Script" path="res://radiation.gd" id="90_bgmtq"]
+[ext_resource type="Script" path="res://light.gd" id="91_jkh1n"]
+[ext_resource type="Script" path="res://magic.gd" id="92_mpdsm"]
+
+[sub_resource type="GDScript" id="GDScript_y6l77"]
+script/source = "extends HBoxContainer
+
+var fam_c
+
+
+func _ready():
+	for button in get_tree().get_nodes_in_group(\"STATMOD\"):
+		button.pressed.connect(shift)
+	fam_c = Global.effint
+
+func shift():
+	pass
+"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tr2ym")
+
+[node name="stats" type="HBoxContainer" parent="NinePatchRect/VBoxContainer"]
+layout_mode = 2
+script = SubResource("GDScript_y6l77")
+
+[node name="Mind" type="VBoxContainer" parent="NinePatchRect/VBoxContainer/stats"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Mind"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("1_jg5kn")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer"]
+layout_mode = 2
+text = "Mind:"
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" groups=["prime plus", "prime plusplus"]]
+visible = false
+layout_mode = 2
+text = "+"
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" groups=["prime minus", "prime plus"]]
+visible = false
+layout_mode = 2
+text = "-"
+
+[node name="Mind" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+script = ExtResource("1_rdhab")
+
+[node name="Mind d20" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="Mind Roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer"]
+layout_mode = 2
+
+[node name="int" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Mind"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("4_8dh38")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/int"]
+layout_mode = 2
+text = "int:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/int"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/int" groups=["IncreaseMind", "PLUS", "STATMOD", "int"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("5_ugrv5")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/int" groups=["DecreaseMind", "MINUS", "STATMOD", "int"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("3_wfgfa")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/int"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+script = ExtResource("7_bspcy")
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/int"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/int"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/int"]
+layout_mode = 2
+
+[node name="wis" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Mind"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("4_8dh38")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/wis"]
+layout_mode = 2
+text = "wis:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/wis"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/wis" groups=["IncreaseMind", "PLUS", "STATMOD", "wis"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("7_1ahva")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/wis" groups=["DecreaseMind", "MINUS", "STATMOD", "wis"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("8_fr5ea")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/wis"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+script = ExtResource("10_032w0")
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/wis"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/wis"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/wis"]
+layout_mode = 2
+
+[node name="prc" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Mind"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("4_8dh38")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prc"]
+layout_mode = 2
+text = "prc:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prc"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/prc" groups=["IncreaseMind", "PLUS", "STATMOD", "prc"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("8_1oxic")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/prc" groups=["DecreaseMind", "MINUS", "STATMOD", "prc"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("10_0jxjj")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/prc"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+script = ExtResource("13_kb7v5")
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prc"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prc"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prc"]
+layout_mode = 2
+
+[node name="stl" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Mind"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("4_8dh38")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/stl"]
+layout_mode = 2
+text = "stl:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/stl"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/stl" groups=["IncreaseMind", "PLUS", "STATMOD", "stl"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("9_2wcj1")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/stl" groups=["DecreaseMind", "MINUS", "STATMOD", "stl"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("12_4hgqn")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/stl"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+script = ExtResource("16_vql3l")
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/stl"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/stl"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/stl"]
+layout_mode = 2
+
+[node name="prs" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Mind"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("4_8dh38")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prs"]
+layout_mode = 2
+text = "prs:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prs"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/prs" groups=["IncreaseMind", "PLUS", "STATMOD", "prs"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("10_sia5r")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/prs" groups=["DecreaseMind", "MINUS", "STATMOD", "prs"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("14_jhh6f")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/prs"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+script = ExtResource("19_oituh")
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prs"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prs"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/prs"]
+layout_mode = 2
+
+[node name="cha" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Mind"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("4_8dh38")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/cha"]
+layout_mode = 2
+text = "cha:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/cha"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/cha" groups=["IPmod", "IncreaseMind", "PLUS", "STATMOD", "cha"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("11_viuep")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/cha" groups=["DecreaseMind", "MINUS", "STATMOD", "cha"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("16_4fqje")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Mind/cha"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+script = ExtResource("22_72afv")
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/cha"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/cha"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Mind/cha"]
+layout_mode = 2
+
+[node name="Body" type="VBoxContainer" parent="NinePatchRect/VBoxContainer/stats"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Body"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("5_3sijt")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer"]
+layout_mode = 2
+text = "Body:"
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer" groups=["prime plus", "prime plusplus"]]
+visible = false
+layout_mode = 2
+text = "+
+"
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer" groups=["prime minus", "prime plus"]]
+visible = false
+layout_mode = 2
+text = "-"
+
+[node name="Body" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+
+[node name="Body d20" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+
+[node name="roll result" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="Label3" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer"]
+layout_mode = 2
+
+[node name="str" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Body"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("19_f8rip")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/str"]
+layout_mode = 2
+text = "str:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/str"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/str" groups=["IncreaseBody", "PLUS", "STATMOD", "str"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("14_v04ha")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/str" groups=["DecreaseBody", "MINUS", "STATMOD", "str"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("20_03hns")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/str"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+script = ExtResource("28_e6g16")
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/str"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/str"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/str"]
+layout_mode = 2
+
+[node name="ath" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Body"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("19_f8rip")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/ath"]
+layout_mode = 2
+text = "ath:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/ath"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/ath" groups=["IncreaseBody", "PLUS", "STATMOD", "ath"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("15_xcans")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/ath" groups=["DecreaseBody", "MINUS", "STATMOD", "ath"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("22_mmquv")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/ath"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+script = ExtResource("31_8r0nu")
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/ath"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/ath"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/ath"]
+layout_mode = 2
+
+[node name="hlth" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Body"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("19_f8rip")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/hlth"]
+layout_mode = 2
+text = "Hlth:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/hlth"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/hlth" groups=["HPmod", "IncreaseBody", "PLUS", "STATMOD"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("16_7366t")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/hlth" groups=["DecreaseBody", "MINUS", "STATMOD"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("24_1bw3c")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Body/hlth"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+script = ExtResource("34_t1yyn")
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/hlth"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/hlth"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Body/hlth"]
+layout_mode = 2
+
+[node name="Soul" type="VBoxContainer" parent="NinePatchRect/VBoxContainer/stats"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Soul"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("7_mltq4")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer"]
+layout_mode = 2
+text = "Soul:"
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer" groups=["prime plus", "prime plusplus"]]
+visible = false
+layout_mode = 2
+text = "+"
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer" groups=["prime minus", "prime plus"]]
+visible = false
+layout_mode = 2
+text = "-"
+
+[node name="Soul" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer"]
+custom_minimum_size = Vector2(77, 0)
+layout_mode = 2
+script = ExtResource("5_4xw43")
+
+[node name="Button" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer"]
+layout_mode = 2
+text = "roll!"
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="Label3" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer"]
+layout_mode = 2
+
+[node name="fth" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Soul"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("28_apn0x")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/fth"]
+layout_mode = 2
+text = "fth:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/fth"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/fth" groups=["IncreaseSoul", "PLUS", "STATMOD", "fth"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("19_8opjw")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/fth" groups=["DecreaseSoul", "MINUS", "STATMOD", "fth"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("28_ignpt")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/fth"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+script = ExtResource("39_gaofu")
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/fth"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/fth"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/fth"]
+layout_mode = 2
+
+[node name="mgc" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Soul"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("28_apn0x")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc"]
+layout_mode = 2
+text = "mgc:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc" groups=["IncreaseSoul", "PLUS", "STATMOD", "mgc"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("20_1mij2")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc" groups=["DecreaseSoul", "MINUS", "STATMOD", "mgc"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("30_1iyx6")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+script = ExtResource("42_8gvf7")
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/mgc"]
+layout_mode = 2
+
+[node name="life" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/Soul"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("28_apn0x")
+
+[node name="Stat label" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/life"]
+layout_mode = 2
+text = "Life:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/life"]
+layout_mode = 2
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/life" groups=["BDmod", "IncreaseSoul", "LPmod", "PLUS", "STATMOD", "life"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "+"
+script = ExtResource("21_m60hr")
+
+[node name="Decrease" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/life" groups=["DecreaseSoul", "MINUS", "STATMOD", "life"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+script = ExtResource("32_13ovf")
+
+[node name="roll" type="Button" parent="NinePatchRect/VBoxContainer/stats/Soul/life"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "roll!"
+script = ExtResource("45_lyidn")
+
+[node name="d20" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/life"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="atk" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/life"]
+layout_mode = 2
+text = "atk roll:"
+
+[node name="atk_roll" type="Label" parent="NinePatchRect/VBoxContainer/stats/Soul/life"]
+layout_mode = 2
+
+[node name="speeds" type="VBoxContainer" parent="NinePatchRect/VBoxContainer/stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="walk" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/speeds"]
+layout_mode = 2
+script = ExtResource("46_g6yob")
+
+[node name="text" type="Label" parent="NinePatchRect/VBoxContainer/stats/speeds/walk"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "walk:"
+
+[node name="num" type="Label" parent="NinePatchRect/VBoxContainer/stats/speeds/walk"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/stats/speeds/walk" groups=["move_mod"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+"
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/stats/speeds/walk" groups=["move_minus"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"
+
+[node name="swim" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/speeds"]
+layout_mode = 2
+script = ExtResource("47_afb12")
+
+[node name="text" type="Label" parent="NinePatchRect/VBoxContainer/stats/speeds/swim"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "swim:"
+
+[node name="num" type="Label" parent="NinePatchRect/VBoxContainer/stats/speeds/swim"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/stats/speeds/swim" groups=["move_mod"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+"
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/stats/speeds/swim" groups=["move_minus"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"
+
+[node name="climb" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/speeds"]
+layout_mode = 2
+script = ExtResource("48_sjoge")
+
+[node name="text" type="Label" parent="NinePatchRect/VBoxContainer/stats/speeds/climb"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "climb:"
+
+[node name="num" type="Label" parent="NinePatchRect/VBoxContainer/stats/speeds/climb"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/stats/speeds/climb" groups=["move_mod"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+"
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/stats/speeds/climb" groups=["move_minus"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"
+
+[node name="jump" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/speeds"]
+layout_mode = 2
+script = ExtResource("49_oyj3d")
+
+[node name="text" type="Label" parent="NinePatchRect/VBoxContainer/stats/speeds/jump"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "jump:"
+
+[node name="num" type="Label" parent="NinePatchRect/VBoxContainer/stats/speeds/jump"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/stats/speeds/jump" groups=["move_mod"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+"
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/stats/speeds/jump" groups=["move_minus"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"
+
+[node name="flight" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/speeds"]
+layout_mode = 2
+script = ExtResource("50_ernpc")
+
+[node name="text" type="Label" parent="NinePatchRect/VBoxContainer/stats/speeds/flight"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "flight:"
+
+[node name="num" type="Label" parent="NinePatchRect/VBoxContainer/stats/speeds/flight"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/stats/speeds/flight"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+"
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/stats/speeds/flight"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("46_lj5l4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Species" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species"]
+layout_mode = 2
+text = "Species: (Warning: One Time Decision)"
+
+[node name="SpeciesOption" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species"]
+layout_mode = 2
+item_count = 13
+popup/item_0/text = "Human"
+popup/item_1/text = "Witchling"
+popup/item_1/id = 1
+popup/item_2/text = "Hunteses"
+popup/item_2/id = 2
+popup/item_3/text = "Nymph"
+popup/item_3/id = 3
+popup/item_4/text = "Animalias"
+popup/item_4/id = 4
+popup/item_5/text = "Construct"
+popup/item_5/id = 5
+popup/item_6/text = "Demonica"
+popup/item_6/id = 6
+popup/item_7/text = "Angelica"
+popup/item_7/id = 7
+popup/item_8/text = "Witches"
+popup/item_8/id = 8
+popup/item_9/text = "Undead"
+popup/item_9/id = 9
+popup/item_10/text = "Scavegers"
+popup/item_10/id = 10
+popup/item_11/text = "Husk"
+popup/item_11/id = 11
+popup/item_12/text = "Fibrosian"
+popup/item_12/id = 12
+script = ExtResource("2_8l4ia")
+
+[node name="OptionButton" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species"]
+visible = false
+layout_mode = 2
+disabled = true
+item_count = 8
+popup/item_0/text = "Fire"
+popup/item_1/text = "Water"
+popup/item_1/id = 1
+popup/item_2/text = "Nature"
+popup/item_2/id = 2
+popup/item_3/text = "Sky"
+popup/item_3/id = 3
+popup/item_4/text = "Dark"
+popup/item_4/id = 4
+popup/item_5/text = "Light"
+popup/item_5/id = 5
+popup/item_6/text = "Gravity"
+popup/item_6/id = 6
+popup/item_7/text = "Time"
+popup/item_7/id = 7
+script = ExtResource("46_deiln")
+
+[node name="nymphsubspecies" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species"]
+visible = false
+layout_mode = 2
+disabled = true
+item_count = 8
+popup/item_0/text = "Mammal"
+popup/item_1/text = "Insect"
+popup/item_1/id = 1
+popup/item_2/text = "Fish"
+popup/item_2/id = 2
+popup/item_3/text = "Bird"
+popup/item_3/id = 3
+popup/item_4/text = "Reptile"
+popup/item_4/id = 4
+popup/item_5/text = "Amphibian"
+popup/item_5/id = 5
+popup/item_6/text = "extremophiles"
+popup/item_6/id = 6
+popup/item_7/text = "arachnid"
+popup/item_7/id = 7
+script = ExtResource("47_2boj7")
+
+[node name="construct" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species"]
+visible = false
+layout_mode = 2
+disabled = true
+item_count = 4
+popup/item_0/text = "Default"
+popup/item_1/text = "fragile"
+popup/item_1/id = 1
+popup/item_2/text = "durable"
+popup/item_2/id = 2
+popup/item_3/text = "fluid"
+popup/item_3/id = 3
+script = ExtResource("48_llmyb")
+
+[node name="construct_typing" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species"]
+visible = false
+layout_mode = 2
+item_count = 12
+popup/item_0/text = "force"
+popup/item_1/text = "fire"
+popup/item_1/id = 1
+popup/item_2/text = "acid"
+popup/item_2/id = 2
+popup/item_3/text = "ice"
+popup/item_3/id = 3
+popup/item_4/text = "slash/pierce"
+popup/item_4/id = 4
+popup/item_5/text = "electric"
+popup/item_5/id = 5
+popup/item_6/text = "necrotic"
+popup/item_6/id = 6
+popup/item_7/text = "faith"
+popup/item_7/id = 7
+popup/item_8/text = "poison"
+popup/item_8/id = 8
+popup/item_9/text = "psychic"
+popup/item_9/id = 9
+popup/item_10/text = "radiation"
+popup/item_10/id = 10
+popup/item_11/text = "light"
+popup/item_11/id = 11
+script = ExtResource("51_hx5v4")
+
+[node name="OptionButton3" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species"]
+visible = false
+layout_mode = 2
+disabled = true
+item_count = 4
+popup/item_0/text = "zombie"
+popup/item_1/text = "skeleton"
+popup/item_1/id = 1
+popup/item_2/text = "ghost"
+popup/item_2/id = 2
+popup/item_3/text = "vampire"
+popup/item_3/id = 3
+script = ExtResource("49_gbdgu")
+
+[node name="scaveger_mods" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species"]
+visible = false
+layout_mode = 2
+disabled = true
+item_count = 14
+popup/item_0/text = "coiling arm"
+popup/item_1/text = "dead angel.. free wings"
+popup/item_1/id = 1
+popup/item_2/text = "empty organs"
+popup/item_2/id = 2
+popup/item_3/text = "green thumb"
+popup/item_3/id = 3
+popup/item_4/text = "demon arm"
+popup/item_4/id = 4
+popup/item_5/text = "hunter claws"
+popup/item_5/id = 5
+popup/item_6/text = "elemental preference"
+popup/item_6/id = 6
+popup/item_7/text = "built to last"
+popup/item_7/id = 7
+popup/item_8/text = "ghost in a witch"
+popup/item_8/id = 8
+popup/item_9/text = "zombie bite"
+popup/item_9/id = 9
+popup/item_10/text = "springheeled"
+popup/item_10/id = 10
+popup/item_11/text = "tendriquil"
+popup/item_11/id = 11
+popup/item_12/text = "overclocked gears"
+popup/item_12/id = 12
+popup/item_13/text = "double trouble"
+popup/item_13/id = 13
+script = ExtResource("51_x1lje")
+
+[node name="demonica subspecies" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species"]
+visible = false
+layout_mode = 2
+disabled = true
+item_count = 6
+popup/item_0/text = "default"
+popup/item_1/text = "trickster"
+popup/item_1/id = 1
+popup/item_2/text = "enraged"
+popup/item_2/id = 2
+popup/item_3/text = "imp"
+popup/item_3/id = 3
+popup/item_4/text = "wanderer"
+popup/item_4/id = 4
+popup/item_5/text = "archangelica"
+popup/item_5/id = 5
+script = ExtResource("54_m018p")
+
+[node name="archangelica" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species"]
+visible = false
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "default"
+popup/item_1/text = "archdemonica"
+popup/item_1/id = 1
+script = ExtResource("55_pu364")
+
+[node name="husk_bg" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species"]
+visible = false
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "default"
+popup/item_1/text = "old"
+popup/item_1/id = 1
+script = ExtResource("56_boqus")
+
+[node name="fibrosian stuffs" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species"]
+visible = false
+layout_mode = 2
+script = ExtResource("57_uyqkd")
+
+[node name="Domain" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("58_vrsh8")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain"]
+layout_mode = 2
+text = "Domain: (Warning: One Time Decision)"
+
+[node name="DomainOption" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain"]
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "Warrior Spirit"
+popup/item_1/text = "Assassin"
+popup/item_1/id = 1
+
+[node name="betrayal assassin" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "Betrayed Once Before"
+popup/item_1/text = "I Had to Rely on Myself"
+popup/item_1/id = 1
+popup/item_2/text = "They Outsmarted Me"
+popup/item_2/id = 2
+popup/item_3/text = "I Was Outplayed"
+popup/item_3/id = 3
+
+[node name="Talents" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+
+[node name="subclass" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+item_count = 1
+popup/item_0/text = "Default"
+
+[node name="lv4warrior" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+
+[node name="lv5warrior" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+
+[node name="lv61" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "+1 CC"
+popup/item_1/text = "+1 CS"
+popup/item_1/id = 1
+
+[node name="lv62" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "+1 ATK"
+popup/item_1/text = "+1 BD"
+popup/item_1/id = 1
+
+[node name="LV10" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+
+[node name="LV10CC" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+
+[node name="potklv5" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+
+[node name="potklv8" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "Night hunter"
+popup/item_1/text = "Morning stalker"
+popup/item_1/id = 1
+
+[node name="potklv10" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "Stunning Strike"
+popup/item_1/text = "Unseen Force"
+popup/item_1/id = 1
+popup/item_2/text = "Deadly Distraction"
+popup/item_2/id = 2
+
+[node name="potplv5" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+
+[node name="potplv10" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+
+[node name="BGs" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("57_n1sej")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs"]
+layout_mode = 2
+text = "Backgrounds: (Warning: One Time Decision)"
+
+[node name="Backrgounds" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs"]
+layout_mode = 2
+
+[node name="criminal" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs"]
+visible = false
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "served sentence"
+popup/item_1/text = "1.5k copper"
+popup/item_1/id = 1
+
+[node name="LV" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+script = ExtResource("3_rm38h")
+
+[node name="LV Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV"]
+layout_mode = 2
+text = "LV:		"
+
+[node name="Num" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV"]
+layout_mode = 2
+text = "1"
+
+[node name="Increase" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV" groups=["BDmod", "HPmod", "IPmod", "LPmod", "STATMOD"]]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+disabled = true
+text = "+"
+
+[node name="HP" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("12_5rhil")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/HP"]
+layout_mode = 2
+text = "HP:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/HP"]
+layout_mode = 2
+
+[node name="HP buff" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/HP"]
+layout_mode = 2
+
+[node name="LP" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("13_lxxqs")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LP"]
+layout_mode = 2
+text = "LP:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LP"]
+layout_mode = 2
+
+[node name="BD" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("14_7g1rr")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BD"]
+layout_mode = 2
+text = "BD:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BD"]
+layout_mode = 2
+
+[node name="typing" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BD"]
+layout_mode = 2
+
+[node name="special" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BD"]
+layout_mode = 2
+
+[node name="IPs" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("15_448ak")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/IPs"]
+layout_mode = 2
+text = "IPs:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/IPs"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/IPs"]
+layout_mode = 2
+
+[node name="CC" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("16_cwm42")
+
+[node name="nm" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/CC"]
+layout_mode = 2
+text = "CC:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/CC"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/CC"]
+visible = false
+layout_mode = 2
+
+[node name="ATK" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/ATK"]
+layout_mode = 2
+text = "ATK bonus:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/ATK"]
+layout_mode = 2
+
+[node name="Attributes" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("4_o1irc")
+
+[node name="AP Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Attributes"]
+layout_mode = 2
+text = "Attributes: "
+
+[node name="APs" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Attributes"]
+layout_mode = 2
+text = "0"
+script = ExtResource("5_vggr7")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Attributes"]
+layout_mode = 2
+text = "mind APs:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Attributes"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Attributes"]
+layout_mode = 2
+text = "body APs:"
+
+[node name="Label4" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Attributes"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Attributes"]
+layout_mode = 2
+text = "Soul APs:"
+
+[node name="Label6" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Attributes"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 3
+script = ExtResource("60_p4ehp")
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/ScrollContainer"]
+layout_mode = 2
+text = "ABILITIES:"
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+autowrap_mode = 2
+
+[node name="Control" type="Control" parent="NinePatchRect/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="resistances" type="VBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("74_okxwt")
+
+[node name="Falling" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("75_mp3co")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Falling"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Falling:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Falling"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Falling" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Falling" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Falling" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Drowning" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("76_tl7sg")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Drowning"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Drowning:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Drowning"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Drowning" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Drowning" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Drowning" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Fire" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("77_wmfxn")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Fire"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Fire:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Fire"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Fire" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Fire" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Fire" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Burning" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("78_ositb")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Burning"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Burning:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Burning"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Burning" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Burning" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Burning" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Acid" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("79_r2uoe")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Acid"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Acid:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Acid"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Acid" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Acid" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Acid" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Ice" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("80_h4jn8")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Ice"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Ice:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Ice"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Ice" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Ice" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Ice" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Force" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("81_40hu2")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Force"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Force"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Force"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Force" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Force" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Force" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slashing" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("82_5ytte")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Slashing"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Slashing:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Slashing"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Slashing" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Slashing" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Slashing" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Bleeding" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("83_ug5wc")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Bleeding"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Bleeding:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Bleeding"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Bleeding" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Bleeding" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Bleeding" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Leech" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("84_lvegr")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Leech"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Leech:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Leech"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Leech" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Leech" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Leech" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Electric" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("85_2vt1g")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Electric"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Electric:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Electric"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Electric" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Electric" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Electric" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Necrotic" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("86_qeko0")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Necrotic"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Necrotic:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Necrotic"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Necrotic" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Necrotic" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Necrotic" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Faith" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("87_5f3n2")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Faith"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Faith:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Faith"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Faith" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Faith" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Faith" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Poison" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("88_aar8w")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Poison"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Poison:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Poison"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Poison" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Poison" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Poison" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Psychic" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("89_ptmk8")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Psychic"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Psychic:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Psychic"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Psychic" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Psychic" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Psychic" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Radiation" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("90_bgmtq")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Radiation"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Radiation:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Radiation"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Radiation" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Radiation" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Radiation" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Light" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("91_jkh1n")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Light"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Light:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Light"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Light" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Light" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Light" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Magic" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("92_mpdsm")
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Magic"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Magic:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Magic"]
+layout_mode = 2
+
+[node name="minus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Magic" groups=["weaknesss"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="plus" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Magic" groups=["resistance"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="imm" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/Control/resistances/Magic" groups=["immunity"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="fams_skills" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="fams_skills"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="fams_skills/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="skills" type="VBoxContainer" parent="fams_skills/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OptionButton" type="OptionButton" parent="fams_skills/HBoxContainer/skills"]
+layout_mode = 2
+item_count = 10
+popup/item_0/text = "All"
+popup/item_1/text = "Combat"
+popup/item_1/id = 1
+popup/item_2/text = "Movement"
+popup/item_2/id = 2
+popup/item_3/text = "Defence"
+popup/item_3/id = 3
+popup/item_4/text = "Healing"
+popup/item_4/id = 4
+popup/item_5/text = "Mind"
+popup/item_5/id = 5
+popup/item_6/text = "Body"
+popup/item_6/id = 6
+popup/item_7/text = "Soul"
+popup/item_7/id = 7
+popup/item_8/text = "Magic"
+popup/item_8/id = 8
+popup/item_9/text = "General"
+popup/item_9/id = 9
+
+[node name="ScrollContainer" type="ScrollContainer" parent="fams_skills/HBoxContainer/skills"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="name" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/HBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "+"
+
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/plus" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" method="_on_plus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/minus" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" method="_on_minus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind d20" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" method="_on_mind_d_20_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/int/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/int/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/int" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/int/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/int/Increase" method="_on_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/int/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/int/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/int" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/int/roll" to="NinePatchRect/VBoxContainer/stats/Mind/int" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/int/roll" to="NinePatchRect/VBoxContainer/stats/Mind/int/roll" method="_on_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/wis/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/wis/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/wis" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/wis/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/wis/Increase" method="_on_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/wis/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/wis/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/wis" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/wis/roll" to="NinePatchRect/VBoxContainer/stats/Mind/wis" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prc/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prc/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/prc" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prc/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/prc/Increase" method="_on_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prc/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prc/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/prc" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prc/roll" to="NinePatchRect/VBoxContainer/stats/Mind/prc" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/stl/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/stl/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/stl" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/stl/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/stl/Increase" method="_on_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/stl/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/stl/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/stl" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/stl/roll" to="NinePatchRect/VBoxContainer/stats/Mind/stl" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prs/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prs/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/prs" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prs/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/prs/Increase" method="_on_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prs/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prs/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/prs" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/prs/roll" to="NinePatchRect/VBoxContainer/stats/Mind/prs" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/cha/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/cha/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/cha" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/cha/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/cha/Increase" method="_on_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/cha/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/cha/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/cha" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/cha/roll" to="NinePatchRect/VBoxContainer/stats/Mind/cha" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer/plus" to="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer" method="_on_plus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer/minus" to="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer" method="_on_minus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer/Body d20" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" method="_on_body_d_20_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer/Body d20" to="NinePatchRect/VBoxContainer/stats/Body/HBoxContainer" method="_on_body_d_20_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/str/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/str/Increase" to="NinePatchRect/VBoxContainer/stats/Body/str" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/str/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/str/Decrease" to="NinePatchRect/VBoxContainer/stats/Body/str" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/str/roll" to="NinePatchRect/VBoxContainer/stats/Body/str" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/ath/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/ath/Increase" to="NinePatchRect/VBoxContainer/stats/Body/ath" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/ath/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/ath/Decrease" to="NinePatchRect/VBoxContainer/stats/Body/ath" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/ath/roll" to="NinePatchRect/VBoxContainer/stats/Body/ath" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/hlth/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/hlth/Increase" to="NinePatchRect/VBoxContainer/stats/Body/hlth" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/hlth/Increase" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/HP" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/hlth/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/hlth/Decrease" to="NinePatchRect/VBoxContainer/stats/Body/hlth" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Body/hlth/roll" to="NinePatchRect/VBoxContainer/stats/Body/hlth" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer/plus" to="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer" method="_on_plus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer/minus" to="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer" method="_on_minus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer/Button" to="NinePatchRect/VBoxContainer/stats/Soul/HBoxContainer" method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/fth/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/fth/Increase" to="NinePatchRect/VBoxContainer/stats/Soul/fth" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/fth/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/fth/Decrease" to="NinePatchRect/VBoxContainer/stats/Soul/fth" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/fth/roll" to="NinePatchRect/VBoxContainer/stats/Soul/fth" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/mgc/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/mgc/Increase" to="NinePatchRect/VBoxContainer/stats/Soul/mgc" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/mgc/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/mgc/Decrease" to="NinePatchRect/VBoxContainer/stats/Soul/mgc" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/mgc/roll" to="NinePatchRect/VBoxContainer/stats/Soul/mgc" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/life/Increase" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/life/Increase" to="NinePatchRect/VBoxContainer/stats/Soul/life" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/life/Decrease" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/life/Decrease" to="NinePatchRect/VBoxContainer/stats/Soul/life" method="_on_decrease_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Soul/life/roll" to="NinePatchRect/VBoxContainer/stats/Soul/life" method="_on_roll_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/speeds/walk/plus" to="NinePatchRect/VBoxContainer/stats/speeds/walk" method="_on_plus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/speeds/walk/minus" to="NinePatchRect/VBoxContainer/stats/speeds/walk" method="_on_minus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/speeds/swim/plus" to="NinePatchRect/VBoxContainer/stats/speeds/swim" method="_on_plus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/speeds/swim/minus" to="NinePatchRect/VBoxContainer/stats/speeds/swim" method="_on_minus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/speeds/climb/plus" to="NinePatchRect/VBoxContainer/stats/speeds/climb" method="_on_plus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/speeds/climb/minus" to="NinePatchRect/VBoxContainer/stats/speeds/climb" method="_on_minus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/speeds/jump/plus" to="NinePatchRect/VBoxContainer/stats/speeds/jump" method="_on_plus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/speeds/jump/minus" to="NinePatchRect/VBoxContainer/stats/speeds/jump" method="_on_minus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/speeds/flight/plus" to="NinePatchRect/VBoxContainer/stats/speeds/flight" method="_on_plus_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/speeds/flight/minus" to="NinePatchRect/VBoxContainer/stats/speeds/flight" method="_on_minus_pressed"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species/SpeciesOption" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Attributes/APs" method="_on_species_option_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species/OptionButton" to="NinePatchRect/VBoxContainer/HBoxContainer" method="_on_option_button_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species/scaveger_mods" to="NinePatchRect/VBoxContainer/HBoxContainer" method="_on_scaveger_mods_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species/scaveger_mods" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species/scaveger_mods" method="_on_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/DomainOption" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_domain_option_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/betrayal assassin" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_betrayal_assassin_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/Talents" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_talents_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/subclass" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_subclass_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/lv4warrior" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_lv_4_warrior_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/lv5warrior" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_lv_5_warrior_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/lv61" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_lv_61_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/lv62" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_lv_62_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/LV10" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_lv_10_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/LV10CC" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_lv_10cc_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/potklv5" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_potklv_5_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/potklv8" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_potklv_8_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/potklv10" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_potklv_10_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/potplv5" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_potplv_5_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/potplv10" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_potplv_10_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs/Backrgounds" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs" method="_on_backrgounds_item_selected"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV/Increase" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV/Increase" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV" method="_on_increase_pressed"]
