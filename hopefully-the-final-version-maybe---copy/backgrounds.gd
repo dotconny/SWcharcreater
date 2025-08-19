@@ -5,12 +5,12 @@ var num = 1
 func _ready():
 	var options = ["","Peaceful Living", "Drifter", "Broken", "Pampered","Roughian","Faithful","Betrayed","Studious","Specialist","Animal Friendly","Trained Fighter","Streetliving","Criminal","Law Keeper", "Revolutionary","Sportsman","Artiste","Royalty","Military Man","The Charmer","Hermit","Healer","Woodswalker","Vengeful","Scaredy Cat","Descendant","Innocent"]
 	for items in options:
-		$Backrgounds.add_item(items)
+		$Backgrounds.add_item(items)
 
 func _on_backrgounds_item_selected(index):
 	num -= 1
 	if num == 0:
-		$Backrgounds.disabled = true
+		$Backgrounds.disabled = true
 	match index:
 		0:
 			pass
@@ -154,3 +154,13 @@ func _on_backrgounds_item_selected(index):
 	$"../Species/SpeciesOption"._update_APs()
 	Global.the_variable()
 	$"../ATK/Label2".text = str(Global.ATK)
+
+
+func _on_criminal_item_selected(index):
+	match index:
+		0:
+			pass
+		1:
+			Global.copper += 1500
+	$criminal.disabled = true
+	Global.complete_update.emit()

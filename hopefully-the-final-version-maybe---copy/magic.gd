@@ -4,6 +4,7 @@ extends HBoxContainer
 var num
 
 func _ready():
+	$Label2.text = "Neutral"
 	$minus.pressed.connect(minus)
 	$plus.pressed.connect(plus)
 	$imm.pressed.connect(imm)
@@ -17,14 +18,14 @@ func _ready():
 
 
 func update():
-	num = Global.falling_res
+	num = Global.magic_res
 	match num:
 		0:
 			$Label2.text = "Neutral"
 		1:
 			$Label2.text = "Resisted"
 		2:
-			$Labe2.text = "immune"
+			$Label2.text = "immune"
 		-1:
 			$Label2.text = "weakness"
 		_:

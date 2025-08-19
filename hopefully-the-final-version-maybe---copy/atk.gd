@@ -14,8 +14,6 @@ var fth = 0
 var string
 
 func connectors():
-	for button in get_tree().get_nodes_in_group("life"):
-		button.pressed.connect(life)
 	for button in get_tree().get_nodes_in_group("int"):
 		button.pressed.connect(intel)
 	for button in get_tree().get_nodes_in_group("wis"):
@@ -33,7 +31,7 @@ func connectors():
 	for button in get_tree().get_nodes_in_group("mgc"):
 		button.pressed.connect(mgc)
 	for button in get_tree().get_nodes_in_group("life"):
-		button.pressed.connect(life)
+		button.pressed.connect(lifesignal)
 	for button in get_tree().get_nodes_in_group("fth"):
 		button.pressed.connect(faith)
 
@@ -61,7 +59,7 @@ func reroll_update():
 func update_label():
 	$HBoxContainer/VBoxContainer/ATK/Label2.text = str(Global.ATK)
 
-func life():
+func lifesignal():
 	if Global.efflife%2 == 0:
 		if lif < Global.efflife:
 			Global.BD += 2

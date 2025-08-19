@@ -1,14 +1,16 @@
 extends HBoxContainer
 
 var f_buff = 0
-
 var cc_b = 0
+var i = 1
+
 
 func _ready():
 	for button in get_tree().get_nodes_in_group("PLUS"):
 		button.pressed.connect(cc)
 	for button in get_tree().get_nodes_in_group("STATMOD"):
 		button.pressed.connect(changesmaybe)
+	
 
 func cc():
 	$Label2.text = str(Global.CC + f_buff)
@@ -18,6 +20,10 @@ func changesmaybe():
 	var stat_buff = [Global.Mind, Global.Body, Global.Soul]
 	stat_buff.sort()
 	stat_buff.reverse()
-	print(stat_buff)
 	f_buff = stat_buff[2]*2
 	cc()
+	var num = stat_buff[2]
+	if num/(3*i) > 0:
+		Global.res += 1
+		Global.resistance.emit()
+		i += 1

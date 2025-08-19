@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=3 uid="uid://bir33fhpi1w3h"]
+[gd_scene load_steps=96 format=3 uid="uid://bir33fhpi1w3h"]
 
 [ext_resource type="Script" path="res://mindroll.gd" id="1_jg5kn"]
 [ext_resource type="Script" path="res://mind.gd" id="1_rdhab"]
@@ -92,20 +92,13 @@
 [ext_resource type="Script" path="res://radiation.gd" id="90_bgmtq"]
 [ext_resource type="Script" path="res://light.gd" id="91_jkh1n"]
 [ext_resource type="Script" path="res://magic.gd" id="92_mpdsm"]
+[ext_resource type="Script" path="res://testingmoving.gd" id="93_owhvs"]
+[ext_resource type="Script" path="res://skills.gd" id="93_ucncb"]
 
 [sub_resource type="GDScript" id="GDScript_y6l77"]
 script/source = "extends HBoxContainer
 
-var fam_c
-
-
-func _ready():
-	for button in get_tree().get_nodes_in_group(\"STATMOD\"):
-		button.pressed.connect(shift)
-	fam_c = Global.effint
-
-func shift():
-	pass
+#lmao I have 0 idea what I was doing here, I ended up just integrating stats and their functionalities in the atk script so this thing is completely useless but it's a tscn file somehow so I'm just gonna leave it alone
 "
 
 [node name="Control" type="Control"]
@@ -117,6 +110,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1229,7 +1223,7 @@ script = ExtResource("57_n1sej")
 layout_mode = 2
 text = "Backgrounds: (Warning: One Time Decision)"
 
-[node name="Backrgounds" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs"]
+[node name="Backgrounds" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs"]
 layout_mode = 2
 
 [node name="criminal" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs"]
@@ -1373,6 +1367,31 @@ text = "Soul APs:"
 
 [node name="Label6" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Attributes"]
 layout_mode = 2
+
+[node name="Copper" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Copper"]
+layout_mode = 2
+text = "Copper:"
+
+[node name="amount" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Copper"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Skills:"
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "(click to switch page)"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -1913,7 +1932,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="fams_skills" type="NinePatchRect" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1928,18 +1946,32 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("93_owhvs")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="fams_skills/HBoxContainer"]
+[node name="Attained Skills" type="VBoxContainer" parent="fams_skills/HBoxContainer"]
+custom_minimum_size = Vector2(425.333, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="fams_skills/HBoxContainer/Attained Skills"]
+layout_mode = 2
+text = "Skills:"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="fams_skills/HBoxContainer/Attained Skills"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="fams_skills/HBoxContainer/Attained Skills/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="skills" type="VBoxContainer" parent="fams_skills/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+script = ExtResource("93_ucncb")
 
 [node name="OptionButton" type="OptionButton" parent="fams_skills/HBoxContainer/skills"]
 layout_mode = 2
-item_count = 10
+item_count = 11
 popup/item_0/text = "All"
 popup/item_1/text = "Combat"
 popup/item_1/id = 1
@@ -1959,30 +1991,294 @@ popup/item_8/text = "Magic"
 popup/item_8/id = 8
 popup/item_9/text = "General"
 popup/item_9/id = 9
+popup/item_10/text = "Arts and Style"
+popup/item_10/id = 10
+
+[node name="Category name" type="Label" parent="fams_skills/HBoxContainer/skills"]
+layout_mode = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="fams_skills/HBoxContainer/skills"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer"]
+[node name="skills" type="VBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="name" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="ScrollContainer" type="ScrollContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/HBoxContainer/ScrollContainer"]
+[node name="cskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/HBoxContainer"]
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Swordswinger:
+You’ve trained with the blade and have gotten a hang of it, you now gain +1 to attack with all sword type weapons!"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill" groups=["skilladd"]]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+size_flags_vertical = 8
 text = "+"
+
+[node name="mvskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mvskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "
+"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="dskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "
+"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="hskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["hskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="name" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill/VBoxContainer"]
+layout_mode = 2
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "
+"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "
+"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "
+"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="sskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["skill", "sskill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="name" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill/VBoxContainer"]
+layout_mode = 2
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "
+"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "
+"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "
+"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "
+"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="inventory_familiarities" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="inventory_familiarities"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="inventory_purchase" type="ScrollContainer" parent="inventory_familiarities/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Items" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items"]
+layout_mode = 2
+
+[node name="Name" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Name"]
+layout_mode = 2
+
+[node name="Cost" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Cost"]
+layout_mode = 2
+
+[node name="amount" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/amount"]
+layout_mode = 2
+
+[node name="Bonus" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Bonus"]
+layout_mode = 2
+
+[node name="Class" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Class"]
+layout_mode = 2
+
+[node name="Check" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Check"]
+layout_mode = 2
+
+[node name="Range" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Range"]
+layout_mode = 2
+
+[node name="Description" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Description"]
+layout_mode = 2
+
+[node name="Desc_text" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Desc_text"]
+layout_mode = 2
+
+[node name="familiarities" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
 
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/plus" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" method="_on_plus_pressed"]
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/minus" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" method="_on_minus_pressed"]
@@ -2091,6 +2387,8 @@ text = "+"
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/potklv10" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_potklv_10_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/potplv5" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_potplv_5_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/potplv10" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_potplv_10_item_selected"]
-[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs/Backrgounds" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs" method="_on_backrgounds_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs/Backgrounds" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs" method="_on_backrgounds_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs/criminal" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs" method="_on_criminal_item_selected"]
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV/Increase" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_increase_pressed"]
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV/Increase" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV" method="_on_increase_pressed"]
+[connection signal="item_selected" from="fams_skills/HBoxContainer/skills/OptionButton" to="fams_skills/HBoxContainer/skills" method="_on_option_button_item_selected"]

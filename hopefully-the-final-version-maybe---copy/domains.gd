@@ -86,7 +86,7 @@ func _on_increase_pressed():
 						var lv5 = ["","Wild Swing","Deadly Cut","Barbaric Slugger","Distant Snipe","Pure Rage"]
 						for thing in lv5:
 							$lv5warrior.add_item(thing)
-						$v4warrior.visible = true
+						$lv4warrior.visible = true
 						opt()
 					6:
 						$lv61.visible = true
@@ -118,6 +118,9 @@ func _on_increase_pressed():
 						var lv10c = ["","Combat Skill","+1 Expertise"]
 						for item in lv10c:
 							$LV10CC.add_item(item)
+			1:
+				match num:
+					pass
 	else:
 		match sub_ID:
 			1:
@@ -216,7 +219,7 @@ func _on_increase_pressed():
 						$"../../ScrollContainer".ability(string)
 						$"../../ScrollContainer".new_splice(old, new)
 	num += 1
-	$"../Species/SpeciesOption".update()
+	Global.complete_update.emit()
 
 func _on_betrayal_assassin_item_selected(index):
 	$"betrayal assassin".visible = false

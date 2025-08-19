@@ -5,7 +5,6 @@ func _ready():
 		button.pressed.connect(hp)
 
 func hp():
-	print(Global.empty)
 	if Global.empty == true:
 		$Label2.text = str(Global.LVHP/2 + Global.HP + Global.effhlth * 10)
 	else:

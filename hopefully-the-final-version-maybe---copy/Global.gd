@@ -139,6 +139,8 @@ func the_variable():
 
 @warning_ignore("unused_signal")
 signal score_changed(AP)
+signal resistance()
+signal complete_update()
 
 var AP := 0:
 	set(value):

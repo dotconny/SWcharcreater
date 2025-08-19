@@ -3,9 +3,8 @@ extends HBoxContainer
 func ready():
 	$Num.text = str(Global.LV)
 
-func on():
-	$Increase.disabled = false
-	print("huh")
+#func on():
+#	$Increase.disabled = false
 
 func update_label():
 	$Num.text = str(Global.LV)

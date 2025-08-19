@@ -1,5 +1,11 @@
 extends OptionButton
 
+func check_skills():
+	if Global.SP > 0 || Global.mSP > 0 || Global.cSP > 0 || Global.gSP > 0 || Global.mvSP > 0 || Global.dSP > 0 || Global.hSP > 0 || Global.MindSP > 0 || Global.SoulSP > 0 || Global.BodySP > 0 || Global.SoulSP > 0:
+		$"../../HBoxContainer/Label2".text = "(skills available)"
+	else:
+		$"../../HBoxContainer/Label2".text -= "(skills available)"
+
 func check_mind():
 	for button in get_tree().get_nodes_in_group("IncreaseMind"):
 		if Global.mAP > 0:
@@ -42,6 +48,7 @@ func _update_APs():
 
 func _ready():
 	connect("item_selected", self._on_item_selected)
+	Global.complete_update.connect(update)
 
 func update():
 	$"../../HP".hp()
@@ -56,6 +63,9 @@ func update():
 	check_body()
 	_update_APs()
 	movement_update()
+	Global.resistance.emit()
+	$"../../Copper/amount".text = str(Global.copper)
+	check_skills()
 
 func _on_item_selected(index):
 	disabled = true
@@ -207,7 +217,7 @@ Passive: Living Tapestry - Scavs are made up of many body parts, some come from 
 			var string = "Passive: Smarter not Harder - Husks can no longer gain damage immunities, but now they can apply half, rounded down, of their Prime Attribute Bonus to all Attributes in that category that have no points spent in them.
 
 Passive: Queen of their Craft - At character creation you gain +2 Expertise."
-			$"../../BGs/Backrgounds".disabled = true
+			$"../../BGs/Backgrounds".disabled = true
 			$"../husk_bg".visible = true
 		12:
 			Global.Fibrosian += 1
