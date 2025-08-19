@@ -2026,7 +2026,672 @@ layout_mode = 2
 size_flags_vertical = 8
 text = "+"
 
-[node name="mvskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mvskill", "skill"]]
+[node name="cskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bowman:
+Distance is key! Precision is Key-er! Gain a +1 on attack rolls to enemies that are further than your walking speed.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill2" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "dskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hard Head:
+You got a thick skull or something? If an attack hits you in the head, take 4 less damage.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill3" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "dskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Shieldmaster:
+If an enemy rolls a poor attack against you, you can spend your reaction to automatically turn that damage to zero using your shield if it's equipped."
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill4" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bruised Knuckles:
+Add 3 BD to your unarmed hits, however when landing them take 2 damage yourself."
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill5" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill6"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Martial Artist:
+Flip them to the ground, hit them in the throat, deflect their blows! You’ve been training for this moment, get in close and wreck their shit. If within 2 metres of an opponent, gain a +1 to hit.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill6" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill7"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Backstabber:
+You’ve done this before haven’t you.. Apply half your BD ontop of your final damage once per turn when attacking a foe from behind.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill7" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill8"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bomb Bo Ya!!:
+Woah slow down! You’ll take out the whole building at this rate! Apply your BD ontop of any explosive damage you deal but take double the damage from your own explosives.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill8" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill9"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Finisher:
+The thrill of the kill is what excites you huh? Killing or defeating an enemy grants you a bonus IP point, and can only happen three times per short rest.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill9" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill10" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill10"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Wombo Combo:
+If you successfully hit 3 attacks on 1 enemy in the same turn your next attack will deal 4 extra damage.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill10" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill11" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mvskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill11"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Tackle:
+Hit them where it hurts, their whole body! Allows you to attack and move half your walking speed at the same time with a tackle attack, tackling them to the ground only deals your BD and you both are lying down. Meaning you’ll have to use IP to get back up.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill11" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill12" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill12"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ironsights:
+Spend 2 IP to double your range on ranged weapons.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill12" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill13" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill13"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ambidextrous Murder:
+You can wield 2 one handed weapons, one in each hand. Attacking with both costs 1 IP instead of 2. You only add the weapon bonus twice.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill13" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill14" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill14"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "There’s Always Room for One More:
+Gain +1 slot for weapons, meaning you can go from holding 1 weapon to 2 or from 2 to 3. Attacking with 3+ weapons at once costs 3 IP.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill14" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill15" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill15"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quickdraw:
+If your weapon is one handed you do not need to spend an IP to draw it out and if its a two handed weapon you only need to spend 1 IP instead of 2.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill15" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill16" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill16"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quickdraw:
+If your weapon is one handed you do not need to spend an IP to draw it out and if its a two handed weapon you only need to spend 1 IP instead of 2.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill16" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill17" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "gskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill17"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Masochism Rush:
+If you attack yourself, your next attack will deal +5 more damage.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill17" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill18" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill18"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sadistic Tango:
+If you deal bleed damage to an enemy heal for 5 health everytime they take bleeding damage.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill18" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill19" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill19"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "I’m used to putting my back into it:
+All one handed weapons become strange to hold (-1) while you gain a bonus +1 On any two handed weapons you may wield.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill19" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill20" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill20"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Surprising Stabbing:
+When using a small bladed weapon (Dagger, Shortsword, Throwing Knife, any bladed weapon that could be concealed with relative ease), gain a +1 to attack."
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill20" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill21" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill21"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Brutalistic Pitch:
+When using Blunt Force weapons such as clubs, hammer, etc, gain a +1 to attack.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill21" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill22" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill22"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Weapons Master:
+At the start of every day choose 1 Weapon Type to gain a familiarity in, at the end of the day lose that familiarity and repeat the cycle.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill22" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill23" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill23"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ready to Rumble:
+Gain a +2 to hit when using your fists, increase BD when using your fists by 3 (Fist based weapons like Brass Knuckles do not affect this buff)
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill23" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill24" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill24"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cold Blooded Killer:
+If your attack would have left an enemy on 1 HP, set it to 0 anyways.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill24" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill25" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mvskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill25"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Punishing Cowards
+If an enemy within 2m of you begins to move away from you, you can use your reaction to attack them regardless of your weapons range. However you always deal half damage from this attack."
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill25" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill26" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill26"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Punishing Flank
+If there is more than 1 enemy within 2m of you and one misses their attack, you can use your reaction to redirect that attack to auto hit any other enemy in that 2m range."
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill26" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill27" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill27"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hiding Pain Through Bliss:
+Everytime you are attacked and hit outside your turn add a +1 to your BD for the next round. Once your next round ends, reset back to your normal BD."
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill27" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill28" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill28"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Light footwork
+If you are only holding one, light, single handed weapon. Gain a +2 to your Combat Speed
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill28" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill29" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill29"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Skittish
+Automatically draw your weapon at any sign of danger, making it a free interaction. However this also can occur outside of battle such as in a courthouse when you feel threatened by the judge or at a store when someone is trying to rip you off. Which may lead to more chaos.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill29" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill30" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill30"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Steady Aim
+You roll Rigged to hit when using ranged weapons if you don't move in the same turn as the attack.
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill30" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill31" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill31"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reactive Through Initiative
+You can save 2 IP for 2 reactions."
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill31" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill32" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill32"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bowman Expert
+You can only learn this skill if you have a +5 in Intelligence and your expert weapon is Bow
+You can now fire a bow for 1 IP."
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill32" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill33" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "gskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill33"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Dangerous
+Gain +1 BD"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill33" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill34" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill34"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "My Body is My Weapon
+You can only learn this skill if you have familiarity in Unarmed and Unarmoured
+You are better standing alone with nothing but your own body than weapons and armour, gain +5 Damage when attacking with an unarmed strike
+"
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill34" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill35" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "gskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill35"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Nocturnal:
+If you are in darkness or it is night time, gain a +2 on combat speed checks."
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill35" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill36" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill36"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bladework
+You can only learn this skill if you have Sword Swinger, and Expertise in at least one blade.
+Become far more adept with your specific sword type of choice.. Learning every specific technique.
+
+Gain Mastery in your weapon of choice, become capable of using Wisdom, Intelligence, or Perception when using said sword."
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill36" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill37" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill37"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Half-Arming
+Requires Bladework Skill
+A bit unusual… you become capable of placing your right hand on your blade, as to aid you in thrusting into your enemy. If they have chainmail or are resistant to slashing/piercing, negate the resistance/immunity.
+Costs 1 IP to switch from half-arming to regularly holding your blade. When half-arming decrease range by 0.5m."
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill37" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="cskill38" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill38"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Mordhau
+Requires Half-Arming Skill
+Even more unusual, take your sword and hold it by the blade. Use it as a hammer and slam the crossguard into your enemy. Become capable of rolling Strength, Athletics, Stealth, or Intimidation when rolling to attack with the blade/s you have Mastery in. 
+
+Become capable of ignoring temporary health on any armored enemy, dealing Pure damage for the strike in question. Switching from Mordhau to regular combat costs 1 IP
+
+It is impossible to parry, deflect, or block these strikes."
+autowrap_mode = 2
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/cskill38" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mvskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mvskill", "skill"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -2034,10 +2699,133 @@ size_flags_horizontal = 3
 [node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "
+text = "Sprintmaster:
+You can end your turn in a sprint and still get a reaction.
 "
 
 [node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mvskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mvskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Army Mans Advance:
+You can move your max movement speed while also sneaking."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill2" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mvskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mvskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Run and Jump!:
+Double your jump distance."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill3" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mvskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "gskill", "mvskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Light as a Feather:
+When you hit the ground you roll as if you weigh nothing, becoming resistant to fall damage.
+"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill4" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mvskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "gskill", "mvskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Longjump:
++6 Metres to your jump"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill5" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mvskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mvskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill6"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Anyone can wear the mask:
+Gain a +3 when swinging from ropes, ledges, vines, etc."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill6" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mvskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mvskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill7"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100 Metre Dasher
+You may only learn this skill if you have at least a +4 to Body
+Sprinting now makes you move 3x your walking speed instead of just 2x."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill7" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mvskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mvskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill8"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Backdash
+You may only learn this skill if you have a +4 in strength and athletics
+As a reaction you can nearly instantly jump back up to 5 metres away automatically dodging non-AOE projectiles and close range melee hits."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mvskill8" groups=["skilladd"]]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_vertical = 8
@@ -2051,10 +2839,237 @@ size_flags_horizontal = 3
 [node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "
-"
+text = "Deserts Tank:
+If you’re wearing full heavy armour, gain a Bonus +1 CC. Your march into battle will be legendary."
 
 [node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="dskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Shieldmaster:
+While defending with a shield increase your CC by 1 and if the shield has 50+ Shield Health increase it by 2."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill2" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="dskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lightning Fast Reactions:
+Take half damage from a surprise attack, you twist your body and raise your shield or weapon to block an attack you could sense moments before it happened."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill3" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="dskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Turtle Tactics
+Gain a +3 CC while laying down"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill4" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="dskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Brace
+For every 1 IP you spend Defending with a shield you add +5 to the shield's health."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill5" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="dskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill6"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Steel Body
+You must have +2 In Athletics and +2 In Strength to learn this skill
+Your body becomes incredibly tough to damage while remain nimble and fast, you either aren’t fazed by attacks or too fast to be hit by them, increase your CC by 1"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill6" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="dskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill7"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Easy Crits, Hard Hits
+Remove 2 from your CC but now you always have a reaction prepared every turn without spending or saving any IP."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill7" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="dskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill8"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Prepare for Impact
+You must have a +3 in Mind to learn this skill
+When using the shield/defend interaction you now take half damage from all Force and Electric damage."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill8" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="dskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill9"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Prepare for Impact
+You must have a +3 in Mind to learn this skill
+When using the shield/defend interaction you now take half damage from all Force and Electric damage."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill9" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="dskill10" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "dskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill10"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Powerslide
+You must have a +2 in Athletics to learn this skill
+The first time in combat where you are meant to be knocked over, instead slide back 5 metres and become stumbled."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill10" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="dskill11" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill11"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Caught Red Handed
+You must have a +1 in Mind and Body to learn this skill
+If an enemy is attacking you with an unarmed strike, use a reaction to roll a Strength Check against their Attack Check, if you succeed their attack is stopped and they become grappled by you."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill11" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="dskill12" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill12"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Together we fall
+When grappled you can make both you and the grappler knocked over for 1 IP."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill12" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="dskill13" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "dskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill13"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Headbutt
+You must have a +2 in Charisma, Persuasion, Health and Strength to learn this skill
+When grappled you can strike them for your BD in Force Damage automatically for 1 IP each."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill13" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="dskill14" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill14"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Blocker
+Gain +5 Base Shield Health"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/dskill14" groups=["skilladd"]]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_vertical = 8
@@ -2065,17 +3080,12 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill"]
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="name" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill/VBoxContainer"]
-layout_mode = 2
-
-[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "
+text = "Survivor:
+3 Points in Life Is Required to take this.
+Refuse to die. When knocked down to 0 life, once per long rest reset yourself to 1 Life and 5 Health.
 "
 
 [node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill" groups=["skilladd"]]
@@ -2084,7 +3094,145 @@ layout_mode = 2
 size_flags_vertical = 8
 text = "+"
 
-[node name="mskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+[node name="hskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["hskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "I’m Still Standing:
+When you go to 0 Life, once per long rest, you may roll with no bonuses against a 15 check. If you succeed you can get back up with 5 Life and 1 Health.
+"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill2" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="hskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["hskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Urban Doctor:
+Lets just say you had to stitch up someone with duct tape and bubblegum once. Heal an additional +15 health when using the Healing Interaction when not using medical supplies or magic."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill3" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="hskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["hskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Gardener:
+Gain a +3 when investigating flowers/small plants such as shrubbery and if you find a medicinal flower add your BD to the total health you will heal."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill4" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="hskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["hskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Surgeons Skillset:
+You’re not gonna let another one die on your watch. If you’re healing an ally while they are on 0 LP heal an additional +10 Health per healing interaction."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill5" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="hskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["hskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill6"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quick Fixer Upper:
+You may heal a target for 1 IP point in exchange for half the healing. “I’m used to patching up those who just got out of dodge”"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill6" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="hskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "hskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill7"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "No More Worries
+You must have a +2 in Health to learn this skill
+You can touch an ally and heal them for 2 health as an Interaction, although not useful for the healing it is useful because it deactivates status effects like bleeding, burning, etc. You can only use this on one person per combat, resetting the next time you roll Combat Speed."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill7" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="hskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "hskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill8"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Living for Victory
+When an enemy is killed or defeated within a 3m radius around you, automatically heal equal to your BD x 2"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill8" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="hskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["hskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill9"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Tightly Bound
+If you or a target are afflicted with Bleeding 1, you can remove it for 1 IP."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/hskill9" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mskill", "skill"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -2092,10 +3240,542 @@ size_flags_horizontal = 3
 [node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "
+text = "Persuasive Bastard
++1 to Persuasion, but even if you succeed on Persuasion rolls the target would be able to (adequately) tell they’re still being scammed (without it affecting the roll)
 "
 
 [node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Liars Gambit:
+Give yourself and the target a +3 on Deception rolls meaning its high risk high reward, you could accidentally give your enemy just enough to beat you or you could get a great success. “A lie so bold I either win everything here and now or die before I blink”
+"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill2" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Multilingual:
+You decided it would likely be better if you knew more than a single language. Gain 1 Language of choice."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill3" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "mvskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Like the Back of my Hand:
+You’re a geography nerd, and it shows. Gain +1 when traversing difficult terrain and add your Mind Bonus to any directional checks."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill4" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Master of Spacing:
+You are incredibly good at keeping just the right distance between you and the enemy, gain +1 CC."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill5" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill6"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Public Speaker:
+You’re a people person, gain a +1 to Intelligence, Wisdom and Charisma but lose 3 BD."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill6" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill7"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fast Reaction Speed:
+You’re quick on your feet, gain +3 CS"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill7" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill8"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Problem Solver:
+You’re quick at solving problems, +1 to Wisdom"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill8" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill9"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Genius:
+You were born smart, +1 to Mind"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill9" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill10" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill10"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Motivational Speaker:
+You can only take this Skill if you have a +3 Bonus in Mind.
+Once per round you can give any target of your choice a bonus IP. (Excluding self)"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill10" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill11" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill11"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Alien Intellect:
+You may only take this skill if you have a +4 in Mind.
+You can spend 4 hours to learn any language (even dead ones) you can consistently hear or see visually. If it is disrupted for more than 2 minutes then you must reset the timer."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill11" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill12" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill12"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quips:
+You may only take this skill if you have a +2 in Charisma
+You can spend 1 IP to provoke the enemy, get in their heads and throw them off their game. If you succeed a Charisma challenge they get a -4 to their next 2 rolls (does not stack). This skill also doesn't work if the enemy has a -2 or less in mind, as they are not sentient enough to understand your quips."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill12" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill13" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill13"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Greedy Thoughts
+You gain a +3 in any Conversation challenges where gaining money or resources is on the table. From talking about your rewards with a king to talking to a barkeep about their beer. You are excellent at bargaining and once per short rest you can roll your Dice Rigged. However because of this greed you are unable to act fairly, you cannot divya anything up evenly. From pies, to money, to resources you are always going to try and get the most out of your party and the world around you."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill13" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill14" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill14"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Inspiration
+You must have +4 Charisma to learn this skill
+You can spend 5 minutes giving a rousing speech to your party, giving them Temporary Health equal to your Mind Bonus x 5."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill14" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill15" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mskill", "mvskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill15"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Magnetic Pull
+You must have a +1 In Intelligence and Wisdom
+You always know which way is true north no matter what."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill15" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill16" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill16"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Religious in Study
+You must have a +3 in Faith and +3 in Intelligence to learn this skill
+You get a +1 Bonus to Mind, your study of the texts lets you look into the spaces between."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill16" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill17" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill17"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Enemy Breakdown
+You must have a +2 in Mind to learn this skill
+You can study and take down your foe with ease, +3 BD"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill17" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill18" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill18"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Inventor & Genius
+You must have a +3 in Mind to learn this skill
+You can choose 1 Intermediate or beginner coil from the Coilcrafter and learn to be able to craft that twice as long the time it takes the coilcrafter."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill18" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill19" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill19"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Augmentation
+You must have a +2 in Intelligence, Wisdom and Perception to learn this skill
+You can add 1 Removable Enhancement from the Cybernium class to your body."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill19" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill20" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill20"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Elementary
+You must have a +10 in Intelligence to learn this skill
+You know when someone is lying automatically, if you beat a target in an Intelligence Challenge you can figure out what they’re lying about and why they’re hiding it. Doing this overworks your brain and gives you 1 level of exhaustion."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill20" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill21" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill21"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Biology Graduate
+You must have a +6 in Wisdom to learn this skill
+Spend 2 IP to study your foe and instantly learn at least 1 of their weaknesses, resistances and immunities."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill21" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill22" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill22"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Skeptic
+You must have a +4 in Intelligence to learn this skill
+You are now resistant to being charmed or intimidated."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill22" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill23" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill23"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Improvisation
+You must have a +5 in Persuasion to learn this skill
+When failing a roll you can now “Improvise” and flip a coin, if it lands on heads the improvisation will succeed and if it lands on tails the improvisation critically fails leading to chaos."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill23" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill24" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill24"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Researchers Boon
+You must have a +2 in Mind to learn this skill
+For 2 IP you can roll a Mind Challenge against a target, if you succeed the DM must tell you its Mind, Body or Soul bonus and if that is its highest or lowest bonus."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill24" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill25" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill25"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Perceptive
+You have good senses, gain +1 in Perception."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill25" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill26" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill26"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Knowledgeable
+You must have a +2 in Mind to learn this skill
+You are very knowledgeable about the world around you, gain a +3 when using Recall or rolling to remember something or figure something out like ancient runes or someone speaking in a language you’ve never heard before."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill26" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill27" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill27"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Critical Hit
+You must have a +2 in Wisdom and Intelligence to learn this skill
+When hitting a Great attack on an enemy add your Intelligence and Wisdom Bonus on top of the final damage."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill27" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill28" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill28"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Counter Strike
+You must have a +2 in Intelligence and Persuasion to learn this skill
+When counter striking an enemy as a reaction their CC is lowered by 5 not 4."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill28" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill29" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill29"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lost in Thought
+You must have a +3 in Mind to learn this skill
+For every IP spent doing nothing (including saving for a reaction) gain a +1 to all your rolls next round."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill29" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill30" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill30"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Prediction
+You must have a +6 in Wisdom to learn this skill
+When an enemy uses a teleportation like ability you are given one free attack against them. If it is ranged it is guaranteed to hit."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill30" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mskill31" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill31"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Extra Careful
+You must have a +2 in Wisdom and +3 in Perception to learn this skill
+When you do not have access to your max IP amount (stunned, on LP, etc) you gain a +2 to all your rolls."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mskill31" groups=["skilladd"]]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_vertical = 8
@@ -2109,10 +3789,331 @@ size_flags_horizontal = 3
 [node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "
+text = "Parkour:
+Gain a +1 to all rolls while actively climbing, running, jumping outside of combat.
 "
 
 [node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hardcore Parkour:
+Deal a bonus 2 damage if you attack after climbing or jumping on or over something."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill2" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Parkour Pro:
+2 Times per short rest you can reroll a failed Athletics Check outside of combat."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill3" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Danger Sense
+You are alerted when danger is nearby but every time you are alerted you take 2d6 psychic damage."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill4" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bodybuilder
+Adds 3 AP to Strength, takes away 2 AP from Athletics or Health"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill5" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill6"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Wrestle
+As a reaction if an entity tries to grapple you or shove you and you beat their Strength Challenge you can put them into a grapple or shove instead."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill6" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill7"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Choker
+If an entity remains in a grapple with you for 3 turns they fall unconscious for 30 seconds."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill7" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill8"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Shorts in Winter
+You can only learn this skill if you have no other damage resistance or immunity.
+Become immune to cold damage but weak to fire damage."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill8" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill9"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Jacket in Summer
+You can only learn this skill if you have no other damage resistance or immunity.
+Become immune to fire damage but weak to cold damage."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill9" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill10" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "gskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill10"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Terrifying Presence
+At the start of combat all enemies within 6m of you that have a smaller Mind Bonus than you they automatically become frightened of you."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill10" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill11" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill11"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Stamina
+You must have a +2 In Body to learn this skill
+When hitting a great roll or when you get a great roll on an attack against you gain 1 Stamina Point, You can spend Stamina Points to perform extra interactions on your turn that are not attacks. You can spend 1 Stamina Point to jump over a large hole in the ground or to run away from attackers or to climb up a wall or even defend."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill11" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill12" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill12"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Perfected Body
+You must have a +2 in Body to learn this skill
+Train your body to a perfect fighting machine, gain +3 BD."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill12" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill13" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill13"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Well Kept Temple
+Gain a +1 in Body"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill13" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill14" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "gskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill14"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Acrobatically Gifted
+You need +3 in Athletics to Learn this skill
+Enemies have to roll 5 above your CC in order to successfully shove or push you down."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill14" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill15" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "gskill", "mvskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill15"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Movie Style Recovery
+You can get up for 1 Interaction Point."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill15" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill16" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "cskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill16"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Rough Fisted
+You can only learn this skill if you have +5 in Strength
+Your fists have been toughened by the constant abuse and violence, your unarmed strikes now deal +5 Damage"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill16" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill17" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill17"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Such Worthless Virtues
+You can only learn this skill if you have +1 in Mind, Body and Soul
+Choose one of the worthless virtues to gain:
+Pride - Become immune to fear and intimidation but weak to charm.
+Wrath - Become immune to a type of damage of your choosing but take half healing.
+Lust - You now roll Charisma with Rigged dice but instantly fail to all Charm or Persuasion rolls against you.
+Sloth - You gain +1 Max IP, you can no longer use all your IP’s in a turn, you always save the last one for a reaction or to defend.
+Gluttony - If you are not given a reaction by another player you gain a -1 on all your rolls.
+Greed - Roll all dice Rigged however all enemies can do the same to you.
+Envy - The first roll of your turn will always be the same type as the last roll of whatever came before you."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill17" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill18" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill18"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Warmup Stretches
+You know to stretch before the day starts, gain +1 to Athletics."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill18" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="bskill19" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill19"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Working Out
+You curl iron and do pull ups when you can, gain +1 to Strength."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/bskill19" groups=["skilladd"]]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_vertical = 8
