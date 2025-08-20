@@ -4124,20 +4124,205 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill"]
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="name" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill/VBoxContainer"]
-layout_mode = 2
-
-[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "
-"
+text = "God's favourite soldier:
+“I play russian roulette like its hopscotch” Gain a +1 in Faith."
 
 [node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="sskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["skill", "sskill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Trust in Myself:
+Once per day you gain a +2 to a base roll, however if you still fail the roll you lose this ability for the next day."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill2" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="sskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill", "sskill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "I can see your soul!:
+Spend 3 IP to learn the health and BD of any target that is directly in your line of sight closer than 100 metres."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill3" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="sskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["skill", "sskill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Spiritually Awakened:
+Years upon years you have focused on spiritual awakening, come forth. Swap your Health and Life stats at character creation (Health: 20, Life: 5 → Health: 5, Life: 20)"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill4" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="sskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill", "sskill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Belief Comes Naturally:
+Gain +1 Soul upon character creation."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill5" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="sskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill", "sskill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill6"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Soul Scan
+Costing 2 IPs, Soul Scan expands your internal magic outwards in a bubble of 50m and can detect all beings with souls within that bubble, the strain can be too much and every 3 people you detect above 5 deals 1d4 damage. (i.e. 8 = 1d4, 11 = 2d4, etc)"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill6" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="sskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["skill", "sskill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill7"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Holy Officiant
+You can only learn this skill if you have 6 Faith
+You can craft one Holy Item during a long rest"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill7" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="sskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["skill", "sskill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill8"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pure Determination
+You must have +2 Charisma and a +3 Bonus in Soul to learn this skill
+Your determination is unstoppable. Once per turn you can turn a Failed roll into a success."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill8" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="sskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["skill", "sskill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill9"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Religious Prisoner
+Trapped within a church, trapped within a lie to believe in truth. -1 Wisdom, +3 to Faith."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill9" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="sskill10" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill", "sskill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill10"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Soulful Fighter
+You must have a +2 in Soul to learn this skill
+Your body and soul are fused, you gain +3 BD"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill10" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="sskill11" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill", "sskill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill11"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Faithful Fist
+You must have +5 in Faith to learn this skill
+Your trust in yourself has granted you a great energy that flows through you, your unarmed strikes now turn to Holy Damage and deal +5 damage"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill11" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="sskill12" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill", "sskill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill12"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Simple Fixture
+You must have a +4 in Faith and Magic to learn this skill
+Once a day you can open up a small barrier of your own soul around you, in this barrier all magical and non magical damage is lessened by 40 and you become immune to auto hit attacks. This micro Fixture only lasts 20 seconds and can only cover you. This fixture can also end early if you attack, it takes concentration and if you spend your IP doing anything other than keeping it active it will break."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/sskill12" groups=["skilladd"]]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_vertical = 8
@@ -4185,10 +4370,795 @@ size_flags_horizontal = 3
 [node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "
+text = "Bare Knuckle Art
+While using unarmed melee attacks you can now add your Body Bonus to your BD and gain a +2 to hit with unarmed attacks. You become unfamiliar with all weapons.
 "
 
 [node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Multi Strike Art
+You can gain an additional free attack interaction on your turn, in exchange you lose 3 CC for the next 20 seconds."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill2" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ranger Strategy Art
+You can add your BD to any ranged attacks you make which didn’t include your BD before, you also gain a +1 to hit with attacks outside of your melee range. You get a -2 to hit all melee attacks."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill3" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bladework Art
+At the start of your turn if you attack with a bladed weapon you can apply an injury to the first target you attack, you cannot apply multiple injuries to the same enemy and you cannot apply two injuries of the same type back to back (eg: chest injury on enemy 1 and then chest injury on enemy 2 = ✘. leg injury on enemy 1 and chest injury on enemy 2 = ✔). You now roll Sabotaged on all ranged rolls."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill4" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Tanker Art
+Your base shield health is now Strength x 6. You can also shield an ally within 3m of you as a Shield Interaction. You can now react when an ally is attacked but can no longer be given reactions."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill5" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill6"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Charger Art
+After using a movement interaction your next two attacks' success level increases by one (Miss → Poor, Poor → Success, etc). You get a -1 to Attack."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill6" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill7"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Wrestle Art
+When grappling an enemy you can now attack them and they take an additional 5 Force Damage with every attack landed on them when grappled. When an enemy breaks out of your grapple you become Stumbled."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill7" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill8"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Acrobatic Art
+Add your Body Bonus onto any non attack based Athletics roll. You get a -1 to all rolls when wearing Heavy armour and your block interaction is put down to Strength Bonus x 2."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill8" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill9"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Explosives Expert Art
+All bombs/explosives you use now have double the damage range than normal. You take double burning damage."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill9" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill10" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill10"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Explosives Expert Art
+All bombs/explosives you use now have double the damage range than normal. You take double burning damage."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill10" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill11" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill11"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Grand Theft Art(o)
+When stumbling an opponent they now drop a weapon or item of your choice that they have equipped or are holding. You are untrustworthy and roll all Charisma rolls Sabotaged."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill11" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill12" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill12"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Flow Art
+All of your interactions auto succeed if they are all unique interactions (eg: attack, shove, movement, grapple or dodge, attack, heal). Everytime you attack additionally on the same turn, get an additional -3 to hit."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill12" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill13" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill13"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Parry Art
+Once a round you can automatically parry a non magical attack, setting it to 0 damage. You can no longer wield 2 IP weapons or wear heavy armour."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill13" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill14" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill14"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Doctor Art
+You can now use the healing interaction 4 times out of combat. It now heals HP Bonus x 3 instead."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill14" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill15" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill15"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Exponential Power Art
+At the start of your turn every round, gain +1 Temporary BD, at the end of the combat reset back to your BD. Life now only gives +2 BD per every 3 points."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill15" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill16" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill16"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Honour Art
+If an enemy goes before you in the turn order you cannot roll lower than a success against them. If an enemy goes after you in the turn order, they cannot roll lower than a success against you."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill16" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill17" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill17"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hearty Swing Art
+If you are wielding a weapon with the “Heavy” class attached to it you can attack an additional time for 1 IP if you have an odd number of IP. (3 IP → 1 attack with 1 additional attack, 4 IP → 2 attacks with no additional attack, 5 IP → 2 attacks with 1 additional attack). All weapons now cost 2 IP to use, including light or ranged weapons."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill17" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill18" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill18"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Soulburned Art
+When attacking an enemy for the first time, roll a Soul Challenge. If you succeed they now take your Soul Bonus as extra damage every time you attack. If you fail you now take your Soul Bonus as retribution damage when you attack them."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill18" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill19" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill19"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Tactical Strike Art
+You can now apply status effects on Great attacks. You take triple damage on enemy Greats."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill19" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill20" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill20"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hyperspeed Art
+If you are above an enemy in the turn order, add how much higher you are to your attack bonus against them. (Eg: If you go first and the enemy goes 3rd, your two slots above them so add a +2 when attacking them)"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill20" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill21" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill21"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bruiser Style
+“You’re a bruiser, a cruiser, a battle inducer”
+The Bruiser Style is all about getting hit and dishing it back out:
+Passive:
+While affected by a negative status you gain +1 Level of Motivation.
+Resource:
+When first affected by a negative status gain +1 Bruiser Crystal. You can spend these crystals upon hitting a Great Attack, for every crystal you spend, increase the total damage of the attack by your level.
+Drawback:
+Your body is tired and beaten, gaining a level of exhaustion after every combat encounter."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill21" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill22" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill22"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Combo Style
+“3x! 4x! 5x! COMBO!!”
+The Combo Style is all about keeping up the pressure and preventing yourself from being stunlocked.
+Passive:
+For every successful attack landed in a round, the next attack gains a +1 to hit.
+Resource:
+If you spend every IP in a round attacking and you do not roll a poor or failure on any of them you gain +1 Combo Crystal. If an enemy lands 2 successes or above attacks on you in a row you can spend a crystal to make their next attack auto miss. If you land 2 successes or above attacks on an enemy you can spend a crystal to make your next attack auto hit.
+Drawback:
+If you miss an attack, you cannot hit above a success for the rest of the round."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill22" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill23" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill23"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sniper Style
+“The further the distance, the harder they fall”
+The Sniper Style is all about keeping your distance and remaining a steady and decisive part of the battle.
+Passive:
+For every metre past 10 metres you attack the enemy from add +1 Damage to the final attack damage.
+Resource:
+For every ranged attack you roll Superior on you gain +1 Headshot Crystal, you can spend a crystal to guarantee the next ranged attack you hit is a Great.
+Drawback:
+You can no longer roll above a great with melee attacks."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill23" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill24" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill24"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Crimson Bringer Style
+“Deep wounds bleed prettier”
+The Crimson Bringer Style is about striking your enemy down through bleeding damage.
+Passive:
+For every level of bleeding you have active on you, gain a +2 to your BD.
+Resource:
+When being hit by a Great attack gain +1 Sanguine Crystal you can spend 1 Crystal to apply 10 Bleeding 1 damage. Or if a target already has Bleeding, you may spend it to increase its level by 1.
+Drawback:
+Your body wishes to unravel into a mess of crimson, it takes 3 IP to be healed. Potions and med kits no longer have an effect on you."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill24" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill25" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill25"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Impenetrable Style
+“A walking wall”
+Impenetrable Style is all about shielding yourself and allies, shutting down damage and staying on the field longer.
+Passive:
+At the start of your turn, gain temporary health equal to your level.
+Resource:
+Everytime your shield health is brought down to 0 gain +1 Steel Crystal, you can spend a crystal to lower incoming damage by 5.
+Drawback:
+Attack Bonus increase has gone from 2 AP into unique Attributes up to 3."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill25" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill26" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill26"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Rushdown Style
+“You can’t escape me!”
+Rushdown Style is all about getting in close and fast, your enemy never gets to have the distance they so crave as you continue your onslaught.
+Passive:
+The next attack after using a movement interaction cannot roll lower than a success.
+Resource:
+Everytime you sprint gain +1 Speed Crystal you can spend a Crystal to move up to 5m for free at any point in the round. The 5m movement from the crystal activates any movement passive you have.
+Drawback:
+If you have moved this round, automatically fail strength challenges against shoves and grapples."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill26" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill27" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill27"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Iron Hold Style
+“You’ve noticed by now that you’re incapable of moving, right?”
+The Iron Hold Style is all about denying your opponent movement and escape options, a simple hand on their shoulder may prevent them from ever being able to move again.
+Passive:
+When successfully grappling an opponent you can either deal your BD in Force, Stun them or throw them to the ground (releasing the grapple) for free.
+Resource
+Everytime an enemy escapes one of your grapples, gain +1 Dominance Crystal you can spend 2 of these crystals to automatically succeed a grapple challenge against an in-range target.
+Drawback:
+You can no longer sprint."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill27" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill28" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill28"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Loose Feet Style
+“Hehe, guess you can’t hit me huh?”
+The Loose Feet Style is all about dodging back and ducking, being unable to be struck by enemies and to always laugh to their face about it.
+Passive:
+At the start of the round, roll Athletics, the result will be your “Passive Dodge” for the rest of the round. If any attack towards you rolls under that number count it as a successful dodge and half all incoming damage.
+Resource
+Every time you dodge an attack gain +1 Slippery Crystal you can spend 5 of these to automatically avoid all damage from an incoming attack whether the attack says you can dodge it or not.
+Drawback:
+Your attack power is weakened, all poors turn to failures."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill28" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill29" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill29"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Demolition Style
+“You’re in the blast zone at all times!!”
+The Demolition Style is all about blasting your enemies sky high and blowing them away with your explosive power.
+Passive:
+You take half damage from your explosives.
+Resource
+Everytime an enemy takes Burning damage gain +1 Demolition Crystal you can spend 2 crystals to grant an explosive a special attribute from the following list:
+Blind a target for their next 2 IP
+Deal an extra 5 Burning 1 damage
+Stun all hit targets
+Stumble all hit targets
+Intimidate a target until the end of your next turn
+Drawback:
+All this gunpowder makes you sick, points into health only give you +5 to start off with."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill29" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill30" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill30"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Draining Combat Style
+“Getting tired? Couldn’t be me”
+The Draining Combat Style is all about wearing down your opponent, stealing their energy and taking it for your own.
+Passive:
+On a superior you now give a target +1 Level of Exhaustion.
+Resource:
+When landing a superior gain +1 Leech Crystal you can spend 2 crystals to turn an attack into Leech Damage and 4 crystals to move a level of exhaustion off yourself into another enemy with an attack.
+Drawback:
+For every Leech Crystal you have not spent by the end of combat, get +1 Level of Exhaustion for 3 hours."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill30" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill31" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill31"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fresh Style
+“You can never expect what’s coming next!”
+The Fresh Style is all about never being stale in combat, to never let your enemies know what your next trick is.
+Passive:
+If you attack using a different attribute than the last attack you made this round, add the attribute bonus from the previous attack onto this one. This compounds, if you attack with strength, then faith, then athletics your athletic attack would also have the added bonus from your faith and strength attributes.
+Resource:
+For every round where every IP is spent using a different attribute to roll you gain +1 Style Crystal, you can spend 1 Style Crystal to perform a stylish stunt with any weapon type of your choice (even if you do not own that weapon) and it is a guaranteed Great (if choosing a weapon you do not own, they deal a max of your BD+Charisma Bonus). If you use a full turn using Style Crystals you gain +1 Style Crystal back!
+Drawback:
+You no longer have a general Attack Bonus."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill31" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill32" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill32"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "On Guard Style
+“Attack me if you dare, but I won't be the one bleeding”
+The On Guard Style is focused on keeping your enemies wary of ever attacking you, to be on guard is laser focused.. To know exactly every direction and angle of attack before the enemies even conceive of it.
+Passive:
+When saving a reaction you now gain 2 Reactions. When using a reaction you can choose to parry the incoming attack as long as it is not magical. To parry you must beat their attack roll with a Perception Check. Parrying an attack sets the incoming damage to 0.
+Resource:
+For every successful parry you get +1 Counter Crystal you can spend 1 crystal to gain a free attack after successfully parrying another attack.
+Drawback:
+You can no longer wield 2 IP weapons and cannot be given reactions from other players."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill32" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill33" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill33"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Healthy Hand Style
+“Sometimes the best medicine is a little poison”
+The Healthy Hand Style is all about whooping your enemies asses and keeping your allies safe. A fusion of martial arts and healing that allows you to keep everyone in the fight.
+Passive:
+Everytime you land a successful unarmed strike, heal yourself 5 HP. Heal 10 on Greats, 15 on Superiors and 30 on Unbelievables.
+Resource:
+When landing a Great or above attack you gain +1 Medic Crystal you can spend one crystal with 1 IP to heal any ally for 10 HP automatically no matter the distance or you can heal an ally for 5 HP at any point in the round for free.
+Drawback:
+Your healing interaction is now HP Bonus x 3."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill33" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill34" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill34"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Rising Tide Style
+“Before you even realise it, the tide has risen so high all you’ve known have drowned”
+The Rising Tide Style is about slowly building up your power to then later release it, at the start of the encounter you begin as normal but the longer the fight goes the stronger you become before you obliterate any foe you stand before.
+Passive:
+If you have not spent all your power crystals at the end of the combat you can carry over up to 2 of them to the next encounter.
+Resource:
+For every IP you do not spend in a round (saving for a reaction counts as spending it) you gain +1 Power Crystal. At any point when attacking you can spend any amount of crystals to empower the strike, for every crystal you spend on the attack add your BD to the final damage amount.
+Drawback:
+When knocked to LP you are set to 1 IP and you gain 2 levels of exhaustion."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill34" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill35" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill35"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Samurai Style
+“This is about honour, which of us falls matters not as long as honour lives”
+The Samurai Style is about showing your opponent that you are better, not because of circumstance but because of sheer force of will.
+Passive:
+You move like a ghost, if you are stealthing and are caught, enemies will no longer assume you are aggressive, your relationship to them will be neutral.
+Resource:
+You can choose to be honourable, remove your attack bonus on an attack. If you land a Great attack without the bonus you gain +1 Skill Crystal. You can spend a Skill Crystal to automatically guarantee another Great attack no matter the distance.
+Drawback:
+Defeat is true dishonour, when falling to 0 HP you commit seppuku and attack yourself, deal triple your BD to yourself or gain an injury."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill35" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill36" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill36"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Oversized Battalion Style
+“Oh this little thing? It’s what I’m gonna use to hit you with now”
+The Oversized Battalion Style is all about using size and weight to your advantage, wielding weapons that are far above your weight class with relative ease.. Let’s hit someone with a wall shall we?
+Passive:
+Add the first digit of your weapons weight to your final damage. (Eg: a 5 kg sword will count as 05, so add +0. A 34kg tree trunk would count as +3, 65 would be +6, etc)
+Resource:
+When hitting an Unbelievable you gain +1 Embiggen Crystal which you can use to permanently increase the size of an item you own and increase its weight by 10kgs.
+Drawback:
+Wielding large and heavy items is difficult even for you, everytime you roll a poor or miss on an enemy your weapon slips from your grasp and you are knocked over."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill36" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill37" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill37"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Resonance Style
+“Do you feel that? That is your soul”
+The Resonance Style is about pushing past your enemies physical form into the metaphysical, to strike them down through their own soul.
+Passive:
+When attacking an enemy with a lower Soul Bonus than you, roll Rigged against them.
+Resource:
+Whenever you succeed in a Soul Challenge against an enemy you gain +1 Soul Crystal. You can spend a crystal during an attack to deal your BD directly to their soul (life points)
+Drawback:
+Whenever you roll a failure or poor on a Soul Challenge your soul cracks slightly, you take your BD to your Life Points."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill37" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill38" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill38"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Punish Style
+“You died the moment you challenged me”
+The Punish Style is all about attacking the enemy in their weak point, exposing their failings and showing them who is truly the most skilled between you. Such precision comes with an incredible mind.
+Passive:
+You can now roll Intelligence or Wisdom for any attack.
+Resource:
+Whenever you roll a Great attack gain +1 Punish Crystal you can spend a crystal to instantly land a free Great attack if an enemy ever rolls a poor or failure against you.
+Drawback:
+The edge of the blade is deadly for both, enemy Greats count as Superiors against you, Superiors count as Unbelievables."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill38" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="ASskill39" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill39"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Blitz Style
+“I don’t teleport, I'm just that fast!”
+The Blitz style is all about moving quickly and never allowing your enemy to leave your range and always being in their face.
+Passive:
+When you move an enemy back through an attack or shove or such you can travel that same distance for free.
+Resource:
+For every player or enemy you rolled higher than with Combat Speed gain +1 Blitz Crystal. You can spend a crystal to instantly move towards an enemy no matter the distance and attack them, this does not trigger a reaction and ignores all terrain debuffs.
+Drawback:
+If you are dead last in the turn order you get a -3 to all your rolls, what’s a blitzer without their speed?"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill39" groups=["skilladd"]]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_vertical = 8
