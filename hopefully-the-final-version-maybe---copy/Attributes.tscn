@@ -4336,10 +4336,285 @@ size_flags_horizontal = 3
 [node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "
+text = "God Gift:
+Requires 6 Faith to take.
+You have been so faithful to a dead god that it has given you a tiny part of its dying power, gain 1 level 1 Godhand spell from any god of your choosing and you can only cast it 3 times per long rest.
 "
 
 [node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Potion Boiler:
+Requires 3 Intelligence to take.
+You’ve gotten your hands wet before in the art of potion boiling. Become Familiar with a Potions Toolkit and automatically gain the recipes for Small Healing Potion, Small Energy Potion & Poison in a Bottle"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill2" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "One Prayer
+You need 2 in Faith to learn this skill
+Once per short rest you can pray to the skies and heal equal to your Faith Bonus x 10."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill3" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ancient Texts
+You need 5 in Magic to learn this skill
+You can recall +1 Archivists Spell and now regain your Fleeting Mana every two hours."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill4" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Magical Precision
+You gain a +1 to hit when using spells."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill5" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill6"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Magical Intuition
+You get a +1 to Magic."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill6" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill7"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Speak to the Static
+You need 3 in Magic and 3 in Life to learn this skill
+You can now use the Corrupt ability from level 1 Corruptor Domain."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill7" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill8"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sigil Speak
+You need a 7 in Magic and a 4 in Intelligence to learn this skill
+You can pick 3 Glyphs from the Wizard Domain with a Sigil that only has 2 Glyph Slots, Once a day you can make a sigil free wherein you get to cast a 6 mana sigil, any higher and you’d need to spend from your fleeting mana."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill8" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill9"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Magical Combustion
+You need 8 in Magic to learn this skill
+By taking damage equal to half your max health when using it, you can cast One 1 Charge Warlock Spell a day.."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill9" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill10" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill10"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Elementalism
+You need 4 in Magic to learn this skill
+Choose one element from Fire, Water, Air, Earth. That becomes your Elementalist type, now you can grant a weapon of yours a coating in that element giving the weapon +2 Damage Bonus and changing its damage type to Fire, Ice, Force and Force with Air giving the weapon +5m knockback and Earth giving it +1m range."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill10" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill11" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill11"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "May the Coarse be with you
+You need 4 in Charisma and 2 in Persuasion to learn this skill
+You gain access to a strange mystical power called the Coarse, unlocking this power gives you three abilities.
+Rough Grasp - You can grab and move any object you can see within 20m of you that weighs less than half your easy lifting weight.
+Bristly Mind Boggle - You can roll a Mind Challenge against a target you’re speaking to, if you succeed with a Great you can boggle the mind and make them believe/think something
+Gruff Sense - You can now choose to move up one space when rolling Combat Speed at the start of battle.."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill11" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill12" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill12"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Visions
+Once per day the DM rolls two d20. For every die above a 10, you gain a positive hint/clue on what to do next. For every die below a 10, you gain a false/misleading hint on what to do next. If one die is a 20 they gain a singular piece of really necessary information. If one die is a 1 it will cancel out the other die's result."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill12" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill13" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill13"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Mana Blast
+You need 3 in Magic to learn this skill
+Raw magic builds up inside of your hand and lets you hit a target within 2m of you automatically for your Magic Bonus in magic damage.."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill13" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill14" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill14"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Iron Mage
+You need expertise in a bangbox and +4 in Magic to learn this skill
+A fusion of gunslinger and mage, you can now apply magical effects to your bullets for free. They can deal either: Piercing, Ice, Fire, Force or Magic damage and you can change the damage type for free.
+You can also use two different spells:
+Phase - Your bullet can now pass through people or walls to hit a target behind them.
+Destination - Your bullet now deals no damage but you instantly teleport to wherever the bullet landed."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill14" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill15" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill15"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Enchantress
+You need 1 in Intelligence, 1 in Wisdom, 3 in Magic and 1 in Strength to learn this skill
+Over a long rest you can sacrifice the benefits of one and gain a level of exhaustion to apply an Enchantment Stone to an item."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill15" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="mgcskill16" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill16"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Magical BoyGirlPerson Transformation!
+You need a +1 in Magic and a +3 in Charisma to learn this skill
+Once a day you can have a transformation allowing you to go from one set of clothes/armour you own to another instantly."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/mgcskill16" groups=["skilladd"]]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_vertical = 8
@@ -4353,10 +4628,250 @@ size_flags_horizontal = 3
 [node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "
+text = "Versatile:
+Adapt! Improvise! Overcome! Once per short rest you can reroll one check/challenge.
 "
 
 [node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Stealthy:
+As silent as the still wind, gain a +1 on all stealth rolls."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill2" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Night Owl:
+If you are in darkness or it is night time gain a +1 on perception checks."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill3" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Zookeeper:
+It's as if you’ve lived in a zoo your whole life, gain a +3 in conversations when communicating with animals."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill4" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Handyman:
+You’ve worked in the trades long enough to know how to throw a hammer around, choose 1 Handyman tool (Hammer, Drill, Nails, Saw, etc) and gain familiarity (+1) with it."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill5" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill6"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Naked and Afraid:
+The bulky and heavy feelings of armour on your back remind you of the brief sincerity of being naked.. So you’ll settle for casual clothes. If you’re not wearing armour, gain +1 CC"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill6" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill7"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ladykiller:
+The ladies love you and maybe for all the wrong reasons, gain a +2 in conversation based checks and challenges such as charisma, investigation or intimidation against women."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill7" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill8"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sirkiller:
+The men love you and maybe for all the wrong reasons, gain a +2 in conversation based checks and challenges such as charisma, investigation or intimidation against men."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill8" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill9"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Personkiller:
+The people love you and maybe for all the wrong reasons, gain a +2 in conversation based checks and challenges such as charisma, investigation or intimidation against non binary individuals."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill9" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill10" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill10"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lumberjack:
+It’s been a while since you’ve been on sight again, Gain a +1 in strength and become Familiar with axes."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill10" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill11" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill11"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Early Bird:
+Short rests are only 1 hour for you, long rests are only 6 (They are usually 3 and 8)"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill11" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill12" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill12"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hard to Hit, Hard to Win:
+Set all attributes to 0, take all the bonuses of your prime attributes (Body, Mind, Soul) and add the total to your CC. (Example: +1 Body, +1 Mind, +1 Soul = +3 CC). +3 CC is your maximum.
++1 Detriment"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill12" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill13" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill13"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lategame Playoffs:
+At the start of your turn you can “Store” an IP that you will gain as a bonus IP for the next turn (3 IP to 2 so next turn you can have 4). You can only do it if you haven't been injured that turn."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill13" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill14" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill14"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "I’m Feeling Lucky:
+Casinos hate you, Gamblers wanna be you. Once per long rest you can add a +2 Bonus to a general/base roll (which usually cannot have a bonus)"
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill14" groups=["skilladd"]]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "+"
+
+[node name="gskill15" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mskill", "skill"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill15"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "You Ring a Bell:
+You bullshit your way through life and I respect it, gain a +2 Bonus to Deception."
+
+[node name="apply" type="Button" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/gskill15" groups=["skilladd"]]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_vertical = 8
