@@ -44,7 +44,9 @@ func _on_option_button_item_selected(index):
 		9:
 			string = "General"
 			for VBoxContainer in get_tree().get_nodes_in_group("gskill"):
-				VBoxContainer.visible = true
+				visible = true
 		10:
 			string = "Arts and Styles"
+			for VBoxContainer in get_tree().get_nodes_in_group("ASskill"):
+				VBoxContainer.visible = true
 	$"Category name".text = string
