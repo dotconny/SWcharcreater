@@ -54,6 +54,7 @@ var sub_ID
 var sub = false
 var lift = 0
 var flight = false
+var military = 0
 
 var intel = 0
 var wis = 0
@@ -119,6 +120,7 @@ var swim = 5
 var fly = 0
 var jump = 5
 var climb = 5
+var sneak_buff = 0
 var melee = 1
 var dodge = 0
 var cs = 0
@@ -148,6 +150,7 @@ signal complete_update()
 signal unarmour()
 signal light_ar()
 signal heavy_ar()
+signal move()
 
 var AP := 0:
 	set(value):

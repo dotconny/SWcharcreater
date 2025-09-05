@@ -25,7 +25,8 @@ func _on_item_selected(index):
 			string = "Enraged - You gain +4 BD but lose your wings and possession ability."
 			$"../../../ScrollContainer".ability(string)
 		3:
-			Global.walk += 10
+			Global.move_i += 10
+			Global.move.emit()
 			Global.BD += 1
 			string = "\nAbility: Possession - If you roll a great in a Persuasion challenge against a target that you can see, you can leave your body and become a spirit-like form that dances through the air. You can now control the target for exactly 1 IP but this costs your entire turn, you cannot return to your body until the beginning of your next turn meaning your body is completely open to be attacked. In this form your CC is lowered by 4 as you have dropped your guard.\n"
 			$"../../../ScrollContainer".remove(string)

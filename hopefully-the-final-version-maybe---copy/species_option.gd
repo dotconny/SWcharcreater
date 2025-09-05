@@ -22,12 +22,13 @@ func check_soul():
 			button.disabled = false
 
 func movement_update():
-	$"../../../../stats/speeds/walk/num".text = str(Global.walk)
+	$"../../../../stats/speeds/walk/num".text = str(Global.walk*(Global.military+1))
 	$"../../../../stats/speeds/swim/num".text = str(Global.swim)
 	$"../../../../stats/speeds/climb/num".text = str(Global.climb)
 	$"../../../../stats/speeds/jump/num".text = str(Global.jump)
 	if Global.flight:
 		$"../../../../stats/speeds/flight/num".text = str(Global.fly)
+	$"../../../../stats/speeds/sneak/num".text = str(Global.walk/2 + Global.sneak_buff)
 
 func _update_APs():
 	$"../../../../stats/Mind/int/Num".text = str(Global.effint)
@@ -83,7 +84,7 @@ func _on_item_selected(index):
 			Global.BD += 1
 			Global.AP += 3
 			var string = "Ability: Adaptable - Humans are adaptable, they can survive in almost any condition and can change what they focus on when advancing through life. Upon level up you can choose to reposition 1 Attribute Point or Swap Out a Skill with another skill, you do lose all benefits gained by the swapped out skill. Doing this removes any bonus you gained from that point being there."
-			$"../../../ScrollContainer".ability(string)
+			$"../../../VBoxContainer2/ScrollContainer".ability(string)
 		1:
 			Global.climb -= 3
 			Global.swim -= 2

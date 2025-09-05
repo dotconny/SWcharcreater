@@ -48,15 +48,15 @@ func _ready():
 func reroll_update():
 	if Global.reroll == 1:
 		string = "rerolls = " + str(Global.reroll)
-		$HBoxContainer/ScrollContainer.ability(string)
+		$HBoxContainer/VBoxContainer2/ScrollContainer.ability(string)
 	else:
 		if Global.reroll == 0:
 			string = "rerolls = " + str(Global.effprsu)
-			$HBoxContainer/ScrollContainer.remove(string)
+			$HBoxContainer/VBoxContainer2/ScrollContainer.remove(string)
 		else:
 			var new = "rerolls = " + str(Global.reroll)
 			var old = "rerolls = " + str(prsu)
-			$HBoxContainer/ScrollContainer.new_splice(old,new)
+			$HBoxContainer/VBoxContainer2/ScrollContainer.new_splice(old,new)
 
 func update_label():
 	$HBoxContainer/VBoxContainer/ATK/Label2.text = str(Global.ATK)

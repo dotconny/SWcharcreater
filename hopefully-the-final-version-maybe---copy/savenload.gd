@@ -1,5 +1,11 @@
 extends VBoxContainer
+func _ready():
+	$"../LV".savelv1.connect(savelv11)
+	$"../../../../../CORRPTORTABLE/HBoxContainer/VBoxContainer".reset.connect(lv1load)
 
+var savelv1 = "user://savelv1.save"
+var packedsavelv1 = "user://save_scenelv1.tscn"
+var skillsavelv1 = "user://saveskilllv1.json"
 var save1 = "user://save.save"
 var save2 = "user://save2.save"
 var save3 = "user://save3.save"
@@ -15,7 +21,7 @@ var Ability: String
 
 func _save(savenum, packedsave):
 	var savearr: Array = []
-	Ability = $"../../ScrollContainer/Label".text
+	Ability = $"../../VBoxContainer2/ScrollContainer/Label".text
 	for i in arr.size():
 		savearr.append(Global.get(arr[i]))
 		print(str(arr[i]))
@@ -35,7 +41,7 @@ func _load(savenum, packedsave):
 	if FileAccess.file_exists(savenum):
 		var file = FileAccess.open(savenum, FileAccess.READ)
 		savearr = file.get_var()
-		$"../../ScrollContainer/Label".text = file.get_var()
+		$"../../VBoxContainer2/ScrollContainer/Label".text = file.get_var()
 		for i in savearr.size():
 			Global.set(arr[i],savearr[i])
 	$"../Species/SpeciesOption".update()
@@ -88,7 +94,7 @@ func save_attained_skills(path):
 	for HBoxContainer in $"../../../../../fams_skills/HBoxContainer/Attained Skills".get_children():
 		file.store_string(JSON.stringify(save_tree(HBoxContainer)))
 
-
+signal postsavelv1
 
 #func load_attained_skills(path):
 #	var file = FileAccess.open(path, FileAccess.READ)
@@ -100,8 +106,9 @@ func save_attained_skills(path):
 
 func _on_save_1_pressed() -> void:
 	_save(save1, packedsave1)
-	save_attained_skills("user://saveskill.json")
-	#Ability = $"../../ScrollContainer/Label".text
+	save_attained_skills("user://saveskilllv1.json")
+	postsavelv1.emit()
+	#Ability = $"../../VBoxContainer2/ScrollContainer/Label".text
 	#for i in arr.size():
 		#savearr.append(Global.get(arr[i]))
 		#print(str(arr[i]))
@@ -109,6 +116,14 @@ func _on_save_1_pressed() -> void:
 	#var file = FileAccess.open(save1,FileAccess.WRITE)
 	#file.store_var(savearr)
 	#file.store_var(Ability)
+
+func savelv11():
+	_save(savelv1, packedsavelv1)
+	save_attained_skills("user://saveskilllv1.json")
+
+func lv1load():
+	_load(savelv1, packedsavelv1)
+	load_attained_skills("user://saveskilllv1.json")
 
 func _on_save_2_pressed() -> void:
 	_save(save2, packedsave2)

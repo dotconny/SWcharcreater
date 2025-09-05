@@ -28,7 +28,7 @@ func _on_backrgounds_item_selected(index):
 			Global.efflife += 2
 			Global.effstr += 1
 			var string = "Sleep with one eye open: You are immune to magical sleep."
-			$"../../ScrollContainer".ability(string)
+			
 		4:
 			Global.copper += 6800
 			Global.effint += 2
@@ -77,11 +77,11 @@ func _on_backrgounds_item_selected(index):
 			Global.effstl += 2
 			Global.effprs += 1
 			var str = "I Know A Guy: You seem to know a guy in every town and city you visit, a wealth of connections seems to follow you as you go."
-			$"../../ScrollContainer".ability(str)
+			$"../../VBoxContainer2/ScrollContainer".ability(str)
 		14:
 			Global.effprs += 3
 			var string = "Law Speak: Law Speak allows you to overwhelm commoners with your knowledge of local or non local law. And most people wouldn't even be smart enough to know if you’re making stuff up. You could use this to argue your way into a building or get people out of a crime scene quickly or maybe even threaten a barkeep to give you free drinks."
-			$"../../ScrollContainer".ability(string)
+			
 		15:
 			Global.cSP += 1
 			Global.mvSP += 1
@@ -110,11 +110,12 @@ func _on_backrgounds_item_selected(index):
 			Global.cSP += 2
 			Global.effath += 2
 			Global.effstr += 1
+			Global.military += 1
 		20:
 			Global.effcha += 3
 			Global.CC += 1
 			var string = "You Owe Me: You’re a charmer and it shows but your trouble seems to follow you, turns out you owe a lot more people than you thought and they don’t take kindly to I.O.U’s.. for the fourth time."
-			$"../../ScrollContainer".ability(string)
+			
 		21:
 			Global.hSP += 1
 			Global.effhlth += 2

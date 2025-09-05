@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://bir33fhpi1w3h"]
+[gd_scene load_steps=107 format=3 uid="uid://bir33fhpi1w3h"]
 
 [ext_resource type="Script" path="res://mindroll.gd" id="1_jg5kn"]
 [ext_resource type="Script" path="res://mind.gd" id="1_rdhab"]
@@ -60,6 +60,7 @@
 [ext_resource type="Script" path="res://AAAAAAAA.gd" id="46_lj5l4"]
 [ext_resource type="Script" path="res://animaliasub.gd" id="47_2boj7"]
 [ext_resource type="Script" path="res://swim.gd" id="47_afb12"]
+[ext_resource type="Script" path="res://speeds.gd" id="47_ynjyg"]
 [ext_resource type="Script" path="res://construct.gd" id="48_llmyb"]
 [ext_resource type="Script" path="res://climb.gd" id="48_sjoge"]
 [ext_resource type="Script" path="res://undead.gd" id="49_gbdgu"]
@@ -79,6 +80,7 @@
 [ext_resource type="Script" path="res://resistances.gd" id="74_okxwt"]
 [ext_resource type="Script" path="res://falling.gd" id="75_mp3co"]
 [ext_resource type="Script" path="res://drowning.gd" id="76_tl7sg"]
+[ext_resource type="Script" path="res://gambler.gd" id="77_f1a1i"]
 [ext_resource type="Script" path="res://fire.gd" id="77_wmfxn"]
 [ext_resource type="Script" path="res://burning.gd" id="78_ositb"]
 [ext_resource type="Script" path="res://acid.gd" id="79_r2uoe"]
@@ -100,6 +102,8 @@
 [ext_resource type="Script" path="res://item.gd" id="95_8hf1r"]
 [ext_resource type="Script" path="res://fam.gd" id="95_goanp"]
 [ext_resource type="Script" path="res://mainpagetoggles.gd" id="96_bnwkr"]
+[ext_resource type="Script" path="res://gamblersfavouritescript.gd" id="103_jhwa4"]
+[ext_resource type="Script" path="res://enoughgambling.gd" id="104_rwh6x"]
 
 [sub_resource type="GDScript" id="GDScript_y6l77"]
 script/source = "extends HBoxContainer
@@ -779,6 +783,7 @@ layout_mode = 2
 [node name="speeds" type="VBoxContainer" parent="NinePatchRect/VBoxContainer/stats"]
 layout_mode = 2
 size_flags_horizontal = 3
+script = ExtResource("47_ynjyg")
 
 [node name="walk" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/speeds"]
 layout_mode = 2
@@ -904,6 +909,16 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 text = "+"
+
+[node name="sneak" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/stats/speeds"]
+layout_mode = 2
+
+[node name="text" type="Label" parent="NinePatchRect/VBoxContainer/stats/speeds/sneak"]
+layout_mode = 2
+text = "sneak:"
+
+[node name="num" type="Label" parent="NinePatchRect/VBoxContainer/stats/speeds/sneak"]
+layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/VBoxContainer"]
 layout_mode = 2
@@ -1136,10 +1151,12 @@ text = "Domain: (Warning: One Time Decision)"
 
 [node name="DomainOption" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain"]
 layout_mode = 2
-item_count = 2
+item_count = 3
 popup/item_0/text = "Warrior Spirit"
 popup/item_1/text = "Assassin"
 popup/item_1/id = 1
+popup/item_2/text = "Corruptor"
+popup/item_2/id = 2
 
 [node name="betrayal assassin" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
 visible = false
@@ -1157,7 +1174,7 @@ popup/item_3/id = 3
 visible = false
 layout_mode = 2
 
-[node name="subclass" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+[node name="subclasswarrior" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
 visible = false
 layout_mode = 2
 item_count = 1
@@ -1224,6 +1241,85 @@ layout_mode = 2
 [node name="potplv10" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
 visible = false
 layout_mode = 2
+
+[node name="potclv5" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+item_count = 6
+popup/item_0/text = "Confusing Orders"
+popup/item_0/id = 1
+popup/item_1/text = "Overconfident"
+popup/item_1/id = 1
+popup/item_2/text = "Lack of Experience"
+popup/item_2/id = 2
+popup/item_3/text = "Lack of Experience"
+popup/item_3/id = 3
+popup/item_4/text = "Ruthlessness"
+popup/item_4/id = 4
+popup/item_5/text = "Paranoid"
+popup/item_5/id = 5
+
+[node name="subclassassassin" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+item_count = 5
+popup/item_0/text = "default"
+popup/item_1/text = "Chameleon style"
+popup/item_1/id = 5
+popup/item_2/text = "Trickster style"
+popup/item_2/id = 6
+popup/item_3/text = "Song style"
+popup/item_3/id = 7
+popup/item_4/text = "Hunters style"
+popup/item_4/id = 8
+
+[node name="lv5assassin" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+item_count = 12
+popup/item_0/text = "Sabotage"
+popup/item_1/text = "Thievery"
+popup/item_1/id = 1
+popup/item_2/text = "Just a Scratch"
+popup/item_2/id = 2
+popup/item_3/text = "Quickstep"
+popup/item_3/id = 3
+popup/item_4/text = "Noted"
+popup/item_4/id = 4
+popup/item_5/text = "Retaliation"
+popup/item_5/id = 5
+popup/item_6/text = "Pinprick"
+popup/item_6/id = 6
+popup/item_7/text = "Silence"
+popup/item_7/id = 7
+popup/item_8/text = "Versatile Combatant"
+popup/item_8/id = 8
+popup/item_9/text = "Sleep Gas"
+popup/item_9/id = 9
+popup/item_10/text = "Accuracy is King"
+popup/item_10/id = 10
+popup/item_11/text = "Lock Picking"
+popup/item_11/id = 11
+
+[node name="lv7assassin" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "Everyone Can Be A Target"
+popup/item_1/text = "I Only Kill Those Worth Killing"
+popup/item_1/id = 1
+popup/item_2/text = "Kill Those Who Hurt Me or My Friends"
+popup/item_2/id = 2
+popup/item_3/text = "I Don’t Want To Kill"
+popup/item_3/id = 3
+
+[node name="lv9cham" type="OptionButton" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" groups=["lvoption"]]
+visible = false
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "+1 familiarity"
+popup/item_1/text = "+1 CS"
+popup/item_1/id = 1
 
 [node name="BGs" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -1438,20 +1534,37 @@ text = "Load2"
 layout_mode = 2
 text = "Load3"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ABILITIES:"
+
+[node name="Button" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer2"]
+visible = false
+layout_mode = 2
+text = "IT'S GAMBLING TIME!!!!"
+script = ExtResource("77_f1a1i")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 horizontal_scroll_mode = 3
 script = ExtResource("60_p4ehp")
 
-[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/ScrollContainer"]
-layout_mode = 2
-text = "ABILITIES:"
-
-[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/ScrollContainer"]
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer2/ScrollContainer"]
+custom_minimum_size = Vector2(625, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 2
+size_flags_vertical = 3
+text = "
+
+
+"
 autowrap_mode = 2
 
 [node name="Control" type="Control" parent="NinePatchRect/VBoxContainer/HBoxContainer"]
@@ -6163,6 +6276,500 @@ layout_mode = 2
 custom_minimum_size = Vector2(101, 0)
 layout_mode = 2
 
+[node name="CORRPTORTABLE" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CORRPTORTABLE"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CORRPTORTABLE/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("103_jhwa4")
+
+[node name="corrupt 1" type="HBoxContainer" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 1"]
+layout_mode = 2
+text = "Corrupt table 1: "
+
+[node name="Button" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 1"]
+layout_mode = 2
+text = "ROLL!(d8)"
+
+[node name="Label2" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 1"]
+layout_mode = 2
+
+[node name="corrupt 2" type="HBoxContainer" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 2"]
+layout_mode = 2
+text = "Decaying blast: "
+
+[node name="Button" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 2"]
+layout_mode = 2
+disabled = true
+text = "ROLL!(3d6)"
+
+[node name="Label2" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 2"]
+layout_mode = 2
+
+[node name="corrupt 3" type="HBoxContainer" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 3"]
+layout_mode = 2
+text = "Deconstructive Healing:"
+
+[node name="Button" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 3"]
+layout_mode = 2
+disabled = true
+text = "ROLL!(2d4)"
+
+[node name="Label2" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 3"]
+layout_mode = 2
+
+[node name="corrupt 4" type="HBoxContainer" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 4"]
+layout_mode = 2
+text = " Luck of the Draw:"
+
+[node name="Button" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 4"]
+layout_mode = 2
+disabled = true
+text = "ROLL!(d12)"
+
+[node name="Label2" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 4"]
+layout_mode = 2
+
+[node name="corrupt 5" type="HBoxContainer" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 5"]
+layout_mode = 2
+text = "Static Pulse:"
+
+[node name="Button" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 5"]
+layout_mode = 2
+disabled = true
+text = "ROLL!(4d4)"
+
+[node name="Label2" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 5"]
+layout_mode = 2
+
+[node name="corrupt 6" type="HBoxContainer" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 6"]
+layout_mode = 2
+text = "Granted from the Corruption:"
+
+[node name="Button" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 6"]
+layout_mode = 2
+disabled = true
+text = "ROLL!(2d12)"
+
+[node name="Label2" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 6"]
+layout_mode = 2
+
+[node name="corrupt 7" type="HBoxContainer" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 7"]
+layout_mode = 2
+text = "Lucky Prayer:"
+
+[node name="Button" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 7"]
+layout_mode = 2
+disabled = true
+text = "ROLL!(d100)"
+
+[node name="Label2" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 7"]
+layout_mode = 2
+
+[node name="corrupt 8" type="HBoxContainer" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 8"]
+layout_mode = 2
+text = "Chaos Storm:"
+
+[node name="Button" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 8"]
+layout_mode = 2
+disabled = true
+text = "ROLL!(d30)"
+
+[node name="Button2" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 8"]
+visible = false
+layout_mode = 2
+disabled = true
+text = "ROLL!(d60)"
+
+[node name="Button3" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 8"]
+visible = false
+layout_mode = 2
+disabled = true
+text = "ROLL!(d90)"
+
+[node name="Button4" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 8"]
+visible = false
+layout_mode = 2
+disabled = true
+text = "ROLL!(d100)"
+
+[node name="Label2" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 8"]
+layout_mode = 2
+
+[node name="corrupt 9" type="HBoxContainer" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 9"]
+layout_mode = 2
+text = "The Second Hand of Corruption:"
+
+[node name="Button3" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 9"]
+layout_mode = 2
+disabled = true
+text = "ROLL!(d10)"
+
+[node name="Label2" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 9"]
+layout_mode = 2
+
+[node name="corrupt 10" type="HBoxContainer" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 10"]
+layout_mode = 2
+text = "Corrupted Skin:"
+
+[node name="Button3" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 10"]
+layout_mode = 2
+disabled = true
+text = "ROLL!(13 + d20)"
+
+[node name="Label2" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 10"]
+layout_mode = 2
+
+[node name="corrupt 11" type="HBoxContainer" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 11"]
+layout_mode = 2
+text = "GOOD LUCK ROLL!:"
+
+[node name="Button3" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 11"]
+layout_mode = 2
+disabled = true
+text = "ROLL!(3d8)"
+
+[node name="Label2" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 11"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "
+EFFECT:
+
+"
+autowrap_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CORRPTORTABLE/HBoxContainer"]
+custom_minimum_size = Vector2(478.5, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Enough gambling."
+script = ExtResource("104_rwh6x")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="CORRPTORTABLE/HBoxContainer/VBoxContainer2/ScrollContainer"]
+custom_minimum_size = Vector2(478.5, 0)
+layout_mode = 2
+text = "Corruption Table:
+1 - Item deals your level x2 in Fire Damage to everyone in a 4 metre radius in an explosion
+2 - Item becomes stuck in place, unable to move (can still be broken)
+3 - Item becomes very easy for you to pick up or move
+4 - Item heals anyone who touches it 5 Health
+5 - Item grows to double the size
+6 - Item becomes indestructible for 1 minute
+7 - Item deals 3 + BD in electric damage to anyone you hit with it
+8 - Item becomes a weapon of your choice, player has Expert with the weapon for 3 minutes, then the corruption ends and the item is turned to dust
+
+
+Decaying Blast -
+1st d6
+1 - No Damage
+2 - Force Damage
+3 - Lightning Damage
+4 - Slashing Damage
+5 - Psychic Damage
+6 - Poison Damage
+
+2nd d6
+1 - Deals 15 damage to an enemy and back towards you as well.
+2 - Deals 3 Damage
+3 - Deals your BD
+4 - Deals 25 Damage
+5 - Deals 20 Damage
+6 - Deals 10 x Soul Bonus Damage
+
+3rd d6
+1 - Spell targets yourself
+2 - Spell targets anyone of your choice
+3 - Spell hits everything in a 5m radius
+4 - Spell shoots directly forward for 10m
+5 - Spell is delayed on your location by 30 seconds
+6 - Spell has a 10m radius, its location is decided by you
+
+
+Deconstructive Healing -
+1st d4
+1 - Heal 20 HP
+2 - Take 5 Damage
+3 - Take 1d4 poison damage for 1d4 turns
+4 - Heal 20 LP
+
+2nd d4
+1 - Gain a +1 CC until your next spell
+2 - Become weak to all forms of damage until your next spell
+3 - Gain a bonus IP until your next spell
+4 - Reroll both dice
+
+
+
+Luck of the Draw -
+1 - Your skin turns green
+2 - Two enemies of your choosing become dizzy
+3 - All healing becomes useless for 30 seconds
+4 - Take 5 poison damage until healed
+5 - Everyone swaps location with the nearest entity to their left
+6 - All allies gain +1 CC
+7 - Roll your next spell twice and pick which one to take
+8 - Summon an angelic +4 Faith damage sword (Athletics to hit)
+9 - You are teleported 13m into the air
+10 - All weapons are turned to mice for 1 minute
+11 - Spawn 13 mice all around you (count as 1 entity in total) you can control them
+12 - Reroll
+
+Static Pulse -
+1st d4
+1 - Deal 10 Necrotic Damage
+2 - Deal 30 Fire Damage
+3 - Deal 1 Holy Damage
+4 - Deal BDx2 Force Damage
+
+2nd d4
+1 - To an enemy within your line of sight
+2 - To the closest person
+3 - To up to 2 enemies of your choice
+4 - All of your allies
+
+3rd d4
+1 - Heal yourself 10HP
+2 - Damage yourself 15 Slashing damage
+3 - Become stunned
+4 - Gain 1 Bonus IP next turn
+
+4th d4
+1 - Your next spell happens twice
+2 - You cannot cast a spell next turn
+3 - Your next spell deals half damage
+4 - Your next spell deals double damage
+
+
+Granted from the Corruption -
+1st d12
+1 - Heals you for 60 HP
+2 - Injure your leg
+3 - You become immune to blindness, stun and dizziness
+4 - You begin to glow brightly
+5 - Loud music begins to play all around you
+6 - You are granted 50 Temporary Health
+7 - You are healed back to full health
+8 - All enemies become aware of your presence
+9 - You can copy an ability of another party member
+10 - You become a living statue (Half Movement, +3 CC)
+11 - You become a slime (copy slime stats)
+12 - Double your BD
+
+2nd d12
+1 - For 1 second
+2 - Until your next spell
+3 - It will happen in 30 seconds (reroll for duration)
+4 - Until you take a short rest
+5 - Until you take a long rest
+6 - For 10 seconds
+7 - Until you blink
+8 - It will happen in 24 hours (reroll for duration)
+9 - Until you are hit
+10 - It will happen in 1 hour (reroll for duration)
+11 - lasts until end of combat
+12 - Lasts 24 hours
+
+Lucky Prayer - Roll a d100 once per day, if you land on 1, lose a level. If you land on 100, gain a level.
+
+
+Chaos Storm: Part 1 -
+
+1 - Slowly become a statue
+2 - All food becomes poisonous to you
+3 - You slowly become a tree
+4 - You automatically lose all Strength Checks
+5 - You take 10 damage for every metre you move
+6 - All animals become aggressive towards you
+7 - You take 3 poison damage a turn until healed
+8 - All your money becomes dirt
+9 -Everytime you walk roll a Body Check of 15, if you fail you trip and fall
+10 - Any weapons or armour you’re wearing fall off you in a comedic fashion
+11 - The nearest 2 enemies ge a free attack on you
+12 -Everytime you walk through a doorway you become snagged on some part of it
+13 - Everytime you sneeze something embarrassing happens to you
+14 - You get a clogged nose and throat
+15 - Everytime you speak a soft whistling noise is heard
+16 - Everything tastes delicious to you now
+17 - Gain 10m of walking speed
+18 - You magically find d8 + 2 shimmering crystals
+19 - The next attack that is aimed at you auto misses
+20 - Lower one targets CC by 3
+21 - Turn off one magical spell, enchantment or item of your choosing
+22 - Become immune to one type of damage
+23 - Automatically succeed any Athletics Checks
+24 - Apply any one status effect to a target
+25 - Become resistant to fall damage 
+26 - You can react 3 times for 1 IP
+27 - Your next 5 hits are guaranteed to hit
+28 - Your next 5 hits are guaranteed crits
+29 - You gain +4CC for the rest of the encounter, if you are not in an encounter then it vanishes at the end of your next encounter
+30 - You can choose one effect and give it to yourself or another target
+
+
+The Second Hand of Corruption -
+1. Item becomes an animal of your choice with 50 hit points and 10 BD, it moves on your IP.
+2. Item erupts into static like fluid into a 10m radius, anything in this radius becomes stumbled.
+3. Item heals you 15 HP when broken
+4. Item doubles
+5. Item deals +6 Ice Damage
+6. Item inverts uses for 1 minute
+7. Item turns to mist for 3 hours
+8. Item swaps places with another item you can see
+9. Item is Upgraded
+10. Item is Downgraded
+
+GOOD LUCK ROLL! -
+
+No Rank Earned! - Take 20 Psychic Damage and gain a level of exhaustion for 1 minute.
+111 - Return on investment: Act as if this was never rolled, gaining your 2 IP back.
+123 - Win!: Gain +5 BD until your next turn.
+222 - DOUBLE YOUR DOUBLE YOUR DOUBLE: the next roll made, sextuple the resulting number. Ally or Enemy. 
+321 - Loss!: Lose all your BD for 2 minutes!
+333 - LUCKY NUMBER: The next corruption ability you use, you can control its result.
+444 - Death Number: You fall to 0 Life Points
+555 - HOT WOMEN NEAR YOU: You call 2 allies to your aid, they are hot women and they are now near you. Each of them has your BD and 2 IP that they can use on their own turn which happens right before and right after you. After 30 seconds your “Free Trial” is up and must either spend your own IP to move them or they vanish.
+666 -  THE DEVIL'S NUMBER: You are Cursed. Everytime you corrupt you now take your own BD in Pure Damage and you lose all immunities and resistances permanently.
+777 - JACKPOT!!!!: You double your BD, you undo all current negative effects (Including THE DEVIL'S NUMBER!!) you are dealing with from Corrupting, you are now immune to all forms of damage. BD and Immunity return to normal at the end of your 4th turn using this.
+888 - MIAMI: You take a nice vacation, return after a minute with no levels of exhaustion and a cocktail in hand.
+
+Chaos Storm: Part 2 -
+
+31 - Apply levitation to yourself
+32 - Explode the nearest two enemies, dealing 40 Fire damage to each
+33 - Explode yourself, dealing 40 Fire damage to yourself
+34 - Heal equal to your Intelligence Bonus x 2
+35 - Heal equal to your Life Bonus x 4
+36 - Gain 1 Temporary Health
+37 - 3 plastic ducks appear
+38 - The next thing you touch becomes frozen
+39 - 1d4 Wolves spawn around you
+40 - Change the weather to stormy
+41 - Reverse time by 10 seconds
+42 - Create a clone of you with 1 LP and 1 HP
+43 - Teleport 100m in a direction of your choice
+44 - Halve the movement speed of all entities within 50m of you
+45 - Reverse the damage types of everything around you (Force → Slashing, Ice → Fire, Psychic → Force, Necrotic → Faith, etc)
+46 - Time freezes for everyone but you for 10 seconds
+47 - Create a Gravity Well (From The Godhand Book) right by your feet
+48 - Throw everyone backwards 15m, take 25 force damage if you hit a wall
+49 - Turn into a horse
+50 - Turn into a cat
+51 - Turn into a bat
+52 - Turn into a rat
+53 - Become unable to speak Commoner
+54 - A house appears around you
+55 - An evil Ghost (HP:500 LP:600 BD:12) is spawned besides you and attacks you on sight
+56 - Everytime you bleed, floating forest sharks appear to attack you
+57 - Now when Frightened, pass out completely for 1 minute
+58 - Take 15 Fire damage for every 10 seconds in the sunlight
+59 - Become blind
+60 - Lose both your arms
+
+Chaos Storm: Part 3 -
+
+61 - All enemies become half their size (Half BD, +2 CC)
+62 - All enemies start to float upwards
+63 - Lose 1 Level
+64 - All enemies lose their memory
+65 - All enemies lose their equipment
+66 - All enemies level up
+67 - All enemies duplicate
+68 - All enemies lose their legs
+69 - All enemies become magical
+70 - All enemies become frogs
+71 - Turn all melee weapons to ranged and all ranged to melee
+72 - Turn all armour to wooden
+73 - Extinguish all fire based spells instantly
+74 - Drain all water based spells instantly
+75 - Reset all entities to level 1
+76 - Limit everything's BD to 3
+77 - Gain magical armour
+78 - Lose all magical items
+79 - Turn all items into snakes
+80 - summon 1d4 wolves
+81 - The next attack that hits you deals no damage
+82 - The next attack that hits you deals its damage back to the attacker
+83 - The next attack that hits you deals double damage
+84 - The next attack that hits you deals half damage
+85 - The next attack that hits you turns you into a frog
+86 - The next attack that hits you turns the attacker in a frog
+87 - Summon 1 Small Dragon
+88 - Create a black hole
+89 - Create a white hole
+90 - Level up once
+
+
+The Final Storm -
+
+91 - Half the Max HP of all enemies
+92 - Limit all enemies to 1 IP
+93 - Magic becomes unusable around you
+94 - kill any target of your choice
+95 - Fourteen golden statues of you are formed around you
+96 - You gain infinite flight
+97 - Become permanently invisible
+98 - Teleport at will an infinite distance
+99 - Reroll 5 times and take all 5 at once
+100 - Reset back to level 1
+"
+autowrap_mode = 2
+
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/plus" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" method="_on_plus_pressed"]
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/minus" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" method="_on_minus_pressed"]
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/Mind d20" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" method="_on_mind_d_20_pressed"]
@@ -6258,7 +6865,7 @@ layout_mode = 2
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/DomainOption" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_domain_option_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/betrayal assassin" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_betrayal_assassin_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/Talents" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_talents_item_selected"]
-[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/subclass" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_subclass_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/subclasswarrior" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_subclass_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/lv4warrior" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_lv_4_warrior_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/lv5warrior" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_lv_5_warrior_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/lv61" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_lv_61_item_selected"]
@@ -6270,6 +6877,11 @@ layout_mode = 2
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/potklv10" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_potklv_10_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/potplv5" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_potplv_5_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/potplv10" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_potplv_10_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/potclv5" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_potclv_5_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/subclassassassin" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_subclassassassin_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/lv5assassin" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_lv_5_assassin_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/lv7assassin" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_lv_7_assassin_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/lv9cham" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_lv_9_cham_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs/Backgrounds" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs" method="_on_backrgounds_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs/criminal" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs" method="_on_criminal_item_selected"]
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV/Increase" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_increase_pressed"]
@@ -6296,3 +6908,17 @@ layout_mode = 2
 [connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam5/fam" to="inventory_familiarities/HBoxContainer/familiarities/fam5" method="_on_fam_pressed"]
 [connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam5/exp" to="inventory_familiarities/HBoxContainer/familiarities/fam5" method="_on_exp_pressed"]
 [connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam5/mas" to="inventory_familiarities/HBoxContainer/familiarities/fam5" method="_on_mas_pressed"]
+[connection signal="pressed" from="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 1/Button" to="CORRPTORTABLE/HBoxContainer/VBoxContainer" method="_on_button_pressed"]
+[connection signal="pressed" from="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 2/Button" to="CORRPTORTABLE/HBoxContainer/VBoxContainer" method="_on_button_pressed2"]
+[connection signal="pressed" from="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 3/Button" to="CORRPTORTABLE/HBoxContainer/VBoxContainer" method="_on_button_pressed3"]
+[connection signal="pressed" from="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 4/Button" to="CORRPTORTABLE/HBoxContainer/VBoxContainer" method="_on_button_pressed4"]
+[connection signal="pressed" from="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 5/Button" to="CORRPTORTABLE/HBoxContainer/VBoxContainer" method="_on_button_pressed5"]
+[connection signal="pressed" from="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 6/Button" to="CORRPTORTABLE/HBoxContainer/VBoxContainer" method="_on_button_pressed6"]
+[connection signal="pressed" from="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 7/Button" to="CORRPTORTABLE/HBoxContainer/VBoxContainer" method="_on_button_pressed7"]
+[connection signal="pressed" from="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 8/Button" to="CORRPTORTABLE/HBoxContainer/VBoxContainer" method="_on_button_pressed8"]
+[connection signal="pressed" from="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 8/Button2" to="CORRPTORTABLE/HBoxContainer/VBoxContainer" method="_on_button_2_pressed"]
+[connection signal="pressed" from="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 8/Button3" to="CORRPTORTABLE/HBoxContainer/VBoxContainer" method="_on_button_3_pressed"]
+[connection signal="pressed" from="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 8/Button4" to="CORRPTORTABLE/HBoxContainer/VBoxContainer" method="_on_button_4_pressed"]
+[connection signal="pressed" from="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 9/Button3" to="CORRPTORTABLE/HBoxContainer/VBoxContainer" method="_on_button_pressed9"]
+[connection signal="pressed" from="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 10/Button3" to="CORRPTORTABLE/HBoxContainer/VBoxContainer" method="_on_button_pressed10"]
+[connection signal="pressed" from="CORRPTORTABLE/HBoxContainer/VBoxContainer/corrupt 11/Button3" to="CORRPTORTABLE/HBoxContainer/VBoxContainer" method="_on_button_pressed11"]

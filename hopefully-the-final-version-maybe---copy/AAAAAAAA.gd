@@ -46,6 +46,10 @@ func _on_option_button_item_selected(index):
 		2:
 			string = "Tangle: Costing 1IP roll an Athletics Challenge against a target, if you succeed they become trapped in vines. Their movement set to 0 until they beat a Strength Check of 13. 1 IP to attempt to escape."
 		3:
+			Global.move_i += 10
+			for button in get_tree().get_nodes_in_group("move_mod"):
+				button.visible = true
+			$"../stats/speeds/swim".visible = false
 			string = "+Immune to Falling Damage
 +10m of movement except for swimming
 +Hitting a Great unarmed strike knocks a target over
