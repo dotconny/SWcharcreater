@@ -50,6 +50,7 @@ func _on_apply_pressed(button: Button):
 	_deduct(whole)
 
 func _on_load(crazyid):
+	crazyid.resize($skills/ScrollContainer/skills/VBoxContainer.get_children().size())
 	for i in $skills/ScrollContainer/skills/VBoxContainer.get_children().size():
 		if i == crazyid[i]:
 			$skills/ScrollContainer/skills/VBoxContainer.remove_child($skills/ScrollContainer/skills/VBoxContainer.get_child(i))
