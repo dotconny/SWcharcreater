@@ -1,8 +1,9 @@
-[gd_scene load_steps=96 format=3 uid="uid://bir33fhpi1w3h"]
+[gd_scene load_steps=103 format=3 uid="uid://bir33fhpi1w3h"]
 
 [ext_resource type="Script" path="res://mindroll.gd" id="1_jg5kn"]
 [ext_resource type="Script" path="res://mind.gd" id="1_rdhab"]
 [ext_resource type="Script" path="res://atk.gd" id="1_tr2ym"]
+[ext_resource type="Script" path="res://pleasework.gd" id="1_u77h6"]
 [ext_resource type="Script" path="res://species_option.gd" id="2_8l4ia"]
 [ext_resource type="Script" path="res://Level.gd" id="3_rm38h"]
 [ext_resource type="Script" path="res://the attributes/minus counter/decrease.gd" id="3_wfgfa"]
@@ -73,6 +74,8 @@
 [ext_resource type="Script" path="res://fibrosian_stuffs.gd" id="57_uyqkd"]
 [ext_resource type="Script" path="res://domains.gd" id="58_vrsh8"]
 [ext_resource type="Script" path="res://scroll_container.gd" id="60_p4ehp"]
+[ext_resource type="Script" path="res://savenload.gd" id="73_d6vfv"]
+[ext_resource type="Script" path="res://skillstoggle.gd" id="73_q2d1i"]
 [ext_resource type="Script" path="res://resistances.gd" id="74_okxwt"]
 [ext_resource type="Script" path="res://falling.gd" id="75_mp3co"]
 [ext_resource type="Script" path="res://drowning.gd" id="76_tl7sg"]
@@ -94,11 +97,18 @@
 [ext_resource type="Script" path="res://magic.gd" id="92_mpdsm"]
 [ext_resource type="Script" path="res://testingmoving.gd" id="93_owhvs"]
 [ext_resource type="Script" path="res://skills.gd" id="93_ucncb"]
+[ext_resource type="Script" path="res://item.gd" id="95_8hf1r"]
+[ext_resource type="Script" path="res://fam.gd" id="95_goanp"]
+[ext_resource type="Script" path="res://mainpagetoggles.gd" id="96_bnwkr"]
 
 [sub_resource type="GDScript" id="GDScript_y6l77"]
 script/source = "extends HBoxContainer
 
 #lmao I have 0 idea what I was doing here, I ended up just integrating stats and their functionalities in the atk script so this thing is completely useless but it's a tscn file somehow so I'm just gonna leave it alone
+"
+
+[sub_resource type="GDScript" id="GDScript_x5rbi"]
+script/source = "extends HBoxContainer
 "
 
 [node name="Control" type="Control"]
@@ -108,6 +118,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_u77h6")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 visible = false
@@ -1392,6 +1403,41 @@ layout_mode = 2
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = "(click to switch page)"
+script = ExtResource("73_q2d1i")
+
+[node name="savenload" type="VBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("73_d6vfv")
+
+[node name="save" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload"]
+layout_mode = 2
+
+[node name="save1" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload/save"]
+layout_mode = 2
+text = "Save1"
+
+[node name="save2" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload/save"]
+layout_mode = 2
+text = "Save2"
+
+[node name="save3" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload/save"]
+layout_mode = 2
+text = "Save3"
+
+[node name="Load" type="HBoxContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload"]
+layout_mode = 2
+
+[node name="load1" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload/Load"]
+layout_mode = 2
+text = "Load1"
+
+[node name="load2" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload/Load"]
+layout_mode = 2
+text = "Load2"
+
+[node name="load3" type="Button" parent="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload/Load"]
+layout_mode = 2
+text = "Load3"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="NinePatchRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -1951,6 +1997,11 @@ script = ExtResource("93_owhvs")
 [node name="Attained Skills" type="VBoxContainer" parent="fams_skills/HBoxContainer"]
 custom_minimum_size = Vector2(425.333, 0)
 layout_mode = 2
+
+[node name="Button" type="Button" parent="fams_skills/HBoxContainer/Attained Skills"]
+layout_mode = 2
+text = "Switch to Main Page"
+script = ExtResource("96_bnwkr")
 
 [node name="Label" type="Label" parent="fams_skills/HBoxContainer/Attained Skills"]
 layout_mode = 2
@@ -2692,7 +2743,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mvskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mvskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2710,7 +2760,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mvskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mvskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2727,7 +2776,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mvskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mvskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2744,7 +2792,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mvskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "gskill", "mvskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2762,7 +2809,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mvskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "gskill", "mvskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2779,7 +2825,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mvskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mvskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2796,7 +2841,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mvskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mvskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2814,7 +2858,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mvskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mvskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2832,7 +2875,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="dskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2849,7 +2891,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="dskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2866,7 +2907,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="dskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2883,7 +2923,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="dskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2900,7 +2939,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="dskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2917,7 +2955,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="dskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2935,7 +2972,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="dskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2952,7 +2988,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="dskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2970,7 +3005,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="dskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -2988,7 +3022,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="dskill10" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "dskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3006,7 +3039,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="dskill11" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3024,7 +3056,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="dskill12" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3041,7 +3072,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="dskill13" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "dskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3059,7 +3089,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="dskill14" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["dskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3076,7 +3105,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="hskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["hskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3095,7 +3123,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="hskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["hskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3113,7 +3140,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="hskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["hskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3130,7 +3156,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="hskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["hskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3147,7 +3172,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="hskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["hskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3164,7 +3188,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="hskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["hskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3181,7 +3204,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="hskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "hskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3199,7 +3221,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="hskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "hskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3216,7 +3237,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="hskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["hskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3233,7 +3253,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3251,7 +3270,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3269,7 +3287,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3286,7 +3303,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "mvskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3303,7 +3319,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3320,7 +3335,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3337,7 +3351,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3354,7 +3367,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3371,7 +3383,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3388,7 +3399,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill10" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3406,7 +3416,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill11" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3424,7 +3433,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill12" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3442,7 +3450,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill13" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3459,7 +3466,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill14" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3477,7 +3483,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill15" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mskill", "mvskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3495,7 +3500,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill16" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3513,7 +3517,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill17" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3531,7 +3534,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill18" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3549,7 +3551,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill19" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3567,7 +3568,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill20" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3585,7 +3585,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill21" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3603,7 +3602,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill22" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3621,7 +3619,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill23" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3639,7 +3636,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill24" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3657,7 +3653,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill25" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3674,7 +3669,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill26" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3692,7 +3686,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill27" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3710,7 +3703,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill28" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3728,7 +3720,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill29" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3746,7 +3737,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill30" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3764,7 +3754,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mskill31" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3782,7 +3771,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3800,7 +3788,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3817,7 +3804,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3834,7 +3820,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "mskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3851,7 +3836,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3868,7 +3852,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3885,7 +3868,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3902,7 +3884,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3920,7 +3901,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3938,7 +3918,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill10" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "gskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3955,7 +3934,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill11" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3973,7 +3951,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill12" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -3991,7 +3968,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill13" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4008,7 +3984,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill14" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "gskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4026,7 +4001,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill15" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "gskill", "mvskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4043,7 +4017,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill16" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "cskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4061,7 +4034,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill17" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4086,7 +4058,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill18" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4103,7 +4074,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="bskill19" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["bskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4120,7 +4090,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="sskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["skill", "sskill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4137,7 +4106,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="sskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["skill", "sskill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4154,7 +4122,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="sskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill", "sskill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4171,7 +4138,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="sskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["skill", "sskill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4188,7 +4154,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="sskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill", "sskill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4205,7 +4170,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="sskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill", "sskill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4222,7 +4186,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="sskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["skill", "sskill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4240,7 +4203,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="sskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["skill", "sskill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4258,7 +4220,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="sskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["skill", "sskill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4275,7 +4236,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="sskill10" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill", "sskill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4293,7 +4253,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="sskill11" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill", "sskill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4311,7 +4270,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="sskill12" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["cskill", "skill", "sskill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4329,7 +4287,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="mgcskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["mgcskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4346,7 +4303,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="gskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["gskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4363,7 +4319,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4381,7 +4336,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill2" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4398,7 +4352,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill3" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4415,7 +4368,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill4" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4432,7 +4384,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill5" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4449,7 +4400,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill6" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4466,7 +4416,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill7" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4483,7 +4432,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill8" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4500,7 +4448,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill9" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4517,7 +4464,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill10" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4534,7 +4480,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill11" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4551,7 +4496,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill12" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4568,7 +4512,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill13" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4585,7 +4528,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill14" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4602,7 +4544,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill15" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4619,7 +4560,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill16" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4636,7 +4576,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill17" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4653,7 +4592,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill18" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4670,7 +4608,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill19" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4687,7 +4624,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill20" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4704,7 +4640,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill21" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4728,7 +4663,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill22" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4752,7 +4686,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill23" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4776,7 +4709,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill24" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4800,7 +4732,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill25" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4824,7 +4755,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill26" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4848,7 +4778,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill27" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4872,7 +4801,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill28" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4896,7 +4824,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill29" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4925,7 +4852,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill30" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4949,7 +4875,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill31" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4973,7 +4898,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill32" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -4997,7 +4921,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill33" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -5021,7 +4944,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill34" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -5045,7 +4967,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill35" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -5069,7 +4990,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill36" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -5093,7 +5013,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill37" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -5117,7 +5036,6 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill38" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -5141,9 +5059,9 @@ size_flags_vertical = 8
 text = "+"
 
 [node name="ASskill39" type="HBoxContainer" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer" groups=["ASskill", "skill"]]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
+script = SubResource("GDScript_x5rbi")
 
 [node name="description" type="Label" parent="fams_skills/HBoxContainer/skills/ScrollContainer/skills/VBoxContainer/ASskill39"]
 layout_mode = 2
@@ -5181,75 +5099,554 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="inventory_purchase" type="ScrollContainer" parent="inventory_familiarities/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OptionButton" type="OptionButton" parent="inventory_familiarities/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 6
+popup/item_0/text = "inventory"
+popup/item_1/text = "All-Purchases"
+popup/item_1/id = 1
+popup/item_2/text = "Weaponry - poor"
+popup/item_2/id = 2
+popup/item_3/text = "Weaponry - standard"
+popup/item_3/id = 3
+popup/item_4/text = "Armours - poor"
+popup/item_4/id = 4
+popup/item_5/text = "Armours - standard"
+popup/item_5/id = 4
+
+[node name="inventory_purchase" type="ScrollContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Items" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase"]
+[node name="Items" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items"]
+[node name="inventory" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items"]
 layout_mode = 2
 
-[node name="Name" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+[node name="Item" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory"]
+layout_mode = 2
+script = ExtResource("95_8hf1r")
+
+[node name="Name" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Name"]
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item/Name"]
 layout_mode = 2
 
-[node name="Cost" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+[node name="Cost" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Cost"]
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item/Cost"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cost:"
+autowrap_mode = 3
+
+[node name="amount" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item"]
 layout_mode = 2
 
-[node name="amount" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item/amount"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Owned:"
+autowrap_mode = 3
+
+[node name="Bonus" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/amount"]
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item/Bonus"]
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 2
+text = "Bonus:"
+autowrap_mode = 3
+
+[node name="dmg" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item/Bonus"]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="Class" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item"]
 layout_mode = 2
 
-[node name="Bonus" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item/Class"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Check" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Bonus"]
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item/Check"]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="roll" type="Button" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item/Check"]
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 
-[node name="Class" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+[node name="Label2" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item/Check"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Class"]
+[node name="Range" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item"]
 layout_mode = 2
 
-[node name="Check" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item/Range"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Description" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Check"]
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/inventory/Item/Description"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="purchase" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items"]
 layout_mode = 2
 
-[node name="Range" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+[node name="Wpn-p" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Range"]
+[node name="Item" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p"]
 layout_mode = 2
 
-[node name="Description" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+[node name="Name" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Description"]
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item/Name"]
 layout_mode = 2
 
-[node name="Desc_text" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer"]
+[node name="Cost" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/inventory_purchase/Items/VBoxContainer/Desc_text"]
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item/Cost"]
 layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="amount" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item/amount"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Bonus" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item/Bonus"]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="dmg" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item/Bonus"]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="Class" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item/Class"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Check" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item/Check"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Range" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item/Range"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Description" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item/Description"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Desc_text" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-p/Item/Desc_text"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Wpn-s" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase"]
+layout_mode = 2
+
+[node name="Item" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s"]
+layout_mode = 2
+
+[node name="Name" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item/Name"]
+layout_mode = 2
+
+[node name="Cost" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item/Cost"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="amount" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item/amount"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Bonus" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item/Bonus"]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="dmg" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item/Bonus"]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="Class" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item/Class"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Check" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item/Check"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Range" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item/Range"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Description" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item/Description"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Desc_text" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Wpn-s/Item/Desc_text"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Armr-p" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase"]
+layout_mode = 2
+
+[node name="Item" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p"]
+layout_mode = 2
+
+[node name="Name" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item/Name"]
+layout_mode = 2
+
+[node name="Cost" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item/Cost"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="amount" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item/amount"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Bonus" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item/Bonus"]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="dmg" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item/Bonus"]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="Class" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item/Class"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Check" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item/Check"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Range" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item/Range"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Description" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item/Description"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Desc_text" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-p/Item/Desc_text"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Armr-s" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase"]
+layout_mode = 2
+
+[node name="Item" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s"]
+layout_mode = 2
+
+[node name="Name" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item/Name"]
+layout_mode = 2
+
+[node name="Cost" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item/Cost"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="amount" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item/amount"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Bonus" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item/Bonus"]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="dmg" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item/Bonus"]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="Class" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item/Class"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Check" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item/Check"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Range" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item/Range"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Description" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item/Description"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Desc_text" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/VBoxContainer/inventory_purchase/Items/purchase/Armr-s/Item/Desc_text"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
 
 [node name="familiarities" type="VBoxContainer" parent="inventory_familiarities/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="fam1" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/familiarities"]
+layout_mode = 2
+script = ExtResource("95_goanp")
+meta = "fist_atk_buff"
+namez = "Hand-To-Hand"
+metadata/bonus = "atk_ex_buff"
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/familiarities/fam1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="fam" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam1"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
+
+[node name="exp" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam1"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
+
+[node name="mas" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam1"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
+
+[node name="fam2" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/familiarities"]
+layout_mode = 2
+script = ExtResource("95_goanp")
+meta = "atk_ex_buff"
+namez = "Fighting"
+metadata/bonus = "atk_ex_buff"
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/familiarities/fam2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="fam" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam2"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
+
+[node name="exp" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam2"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
+
+[node name="mas" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam2"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
+
+[node name="fam3" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/familiarities"]
+layout_mode = 2
+script = ExtResource("95_goanp")
+meta = "shield_health"
+namez = "Defending"
+metadata/bonus = "atk_ex_buff"
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/familiarities/fam3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="fam" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam3"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
+
+[node name="exp" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam3"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
+
+[node name="mas" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam3"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
+
+[node name="fam4" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/familiarities"]
+layout_mode = 2
+script = ExtResource("95_goanp")
+meta = "shield_health"
+namez = "Defending"
+metadata/bonus = "atk_ex_buff"
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/familiarities/fam4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="fam" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam4"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
+
+[node name="exp" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam4"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
+
+[node name="mas" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam4"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
+
+[node name="fam5" type="HBoxContainer" parent="inventory_familiarities/HBoxContainer/familiarities"]
+layout_mode = 2
+script = ExtResource("95_goanp")
+meta = "unarmoured_cc_b"
+namez = "Unarmoured"
+metadata/bonus = "atk_ex_buff"
+
+[node name="Label" type="Label" parent="inventory_familiarities/HBoxContainer/familiarities/fam5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="fam" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam5"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
+
+[node name="exp" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam5"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
+
+[node name="mas" type="Button" parent="inventory_familiarities/HBoxContainer/familiarities/fam5"]
+custom_minimum_size = Vector2(101, 0)
+layout_mode = 2
 
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/plus" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" method="_on_plus_pressed"]
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer/minus" to="NinePatchRect/VBoxContainer/stats/Mind/HBoxContainer" method="_on_minus_pressed"]
@@ -5362,4 +5759,25 @@ size_flags_horizontal = 3
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs/criminal" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/BGs" method="_on_criminal_item_selected"]
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV/Increase" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_increase_pressed"]
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV/Increase" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/LV" method="_on_increase_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload/save/save1" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload" method="_on_save_1_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload/save/save2" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload" method="_on_save_2_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload/save/save3" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload" method="_on_save_3_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload/Load/load1" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload" method="_on_load_1_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload/Load/load2" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload" method="_on_load_2_pressed"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload/Load/load3" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload" method="_on_load_3_pressed"]
 [connection signal="item_selected" from="fams_skills/HBoxContainer/skills/OptionButton" to="fams_skills/HBoxContainer/skills" method="_on_option_button_item_selected"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam1/fam" to="inventory_familiarities/HBoxContainer/familiarities/fam1" method="_on_fam_pressed"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam1/exp" to="inventory_familiarities/HBoxContainer/familiarities/fam1" method="_on_exp_pressed"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam1/mas" to="inventory_familiarities/HBoxContainer/familiarities/fam1" method="_on_mas_pressed"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam2/fam" to="inventory_familiarities/HBoxContainer/familiarities/fam2" method="_on_fam_pressed"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam2/exp" to="inventory_familiarities/HBoxContainer/familiarities/fam2" method="_on_exp_pressed"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam2/mas" to="inventory_familiarities/HBoxContainer/familiarities/fam2" method="_on_mas_pressed"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam3/fam" to="inventory_familiarities/HBoxContainer/familiarities/fam3" method="_on_fam_pressed"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam3/exp" to="inventory_familiarities/HBoxContainer/familiarities/fam3" method="_on_exp_pressed"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam3/mas" to="inventory_familiarities/HBoxContainer/familiarities/fam3" method="_on_mas_pressed"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam4/fam" to="inventory_familiarities/HBoxContainer/familiarities/fam4" method="_on_fam_pressed"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam4/exp" to="inventory_familiarities/HBoxContainer/familiarities/fam4" method="_on_exp_pressed"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam4/mas" to="inventory_familiarities/HBoxContainer/familiarities/fam4" method="_on_mas_pressed"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam5/fam" to="inventory_familiarities/HBoxContainer/familiarities/fam5" method="_on_fam_pressed"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam5/exp" to="inventory_familiarities/HBoxContainer/familiarities/fam5" method="_on_exp_pressed"]
+[connection signal="pressed" from="inventory_familiarities/HBoxContainer/familiarities/fam5/mas" to="inventory_familiarities/HBoxContainer/familiarities/fam5" method="_on_mas_pressed"]

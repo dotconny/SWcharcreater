@@ -30,12 +30,27 @@ func _deduct(skill):
 func _ready():
 	for button in get_tree().get_nodes_in_group("skilladd"):
 		button.pressed.connect(_on_apply_pressed.bind(button))
+	$"../../NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/savenload".connect("load_skills", Callable(self, "_on_load"))
+
+var idforarray = []
+var counter = 0
 
 func _on_apply_pressed(button: Button):
+	if counter == 0:
+		idforarray.resize($skills/ScrollContainer/skills/VBoxContainer.get_children().size())
+	counter += 1
 	var parent = button.get_parent().get_parent()
 	var whole = button.get_parent()
+	var indexity = button.get_parent().get_parent().get_children().find(button.get_parent())
+	idforarray[indexity] = 1
 	print(parent)
 	parent.remove_child(whole)
 	other.add_child(whole)
-	button.visible = false
+	button.queue_free()
 	_deduct(whole)
+
+func _on_load(crazyid):
+	for i in $skills/ScrollContainer/skills/VBoxContainer.get_children().size():
+		if i == crazyid[i]:
+			$skills/ScrollContainer/skills/VBoxContainer.remove_child($skills/ScrollContainer/skills/VBoxContainer.get_child(i))
+			other.add_child($skills/ScrollContainer/skills/VBoxContainer.get_child(i))

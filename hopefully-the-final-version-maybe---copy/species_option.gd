@@ -4,7 +4,7 @@ func check_skills():
 	if Global.SP > 0 || Global.mSP > 0 || Global.cSP > 0 || Global.gSP > 0 || Global.mvSP > 0 || Global.dSP > 0 || Global.hSP > 0 || Global.MindSP > 0 || Global.SoulSP > 0 || Global.BodySP > 0 || Global.SoulSP > 0:
 		$"../../HBoxContainer/Label2".text = "(skills available)"
 	else:
-		$"../../HBoxContainer/Label2".text -= "(skills available)"
+		$"../../HBoxContainer/Label2".text = ""
 
 func check_mind():
 	for button in get_tree().get_nodes_in_group("IncreaseMind"):
@@ -49,6 +49,11 @@ func _update_APs():
 func _ready():
 	connect("item_selected", self._on_item_selected)
 	Global.complete_update.connect(update)
+
+func _update_atk():
+	$"../../ATK/Label2".text = str(Global.ATK) 
+	if Global.fist_atk_buff > 0:
+		$"../ATK/Label2".text += "   (bare handed atk is:)" + str(Global.fist_atk_buff)
 
 func update():
 	$"../../HP".hp()

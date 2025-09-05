@@ -42,6 +42,8 @@ func _ready():
 	for button in get_tree().get_nodes_in_group("MINUS"):
 		button.pressed.connect(doit)
 	connectors()
+	for button in get_tree().get_nodes_in_group("skilladd"):
+		button.visible = false
 
 func reroll_update():
 	if Global.reroll == 1:
@@ -49,7 +51,7 @@ func reroll_update():
 		$HBoxContainer/ScrollContainer.ability(string)
 	else:
 		if Global.reroll == 0:
-			string = "rerolls = " + str(Global.prsu)
+			string = "rerolls = " + str(Global.effprsu)
 			$HBoxContainer/ScrollContainer.remove(string)
 		else:
 			var new = "rerolls = " + str(Global.reroll)

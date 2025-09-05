@@ -1,6 +1,21 @@
 extends VBoxContainer
 
+var idforhopeful = []
+func _ready():
+	$"../../../NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/Button".changeskills.connect(hopeful)
+
+func hopeful():
+	idforhopeful.resize($ScrollContainer/skills/VBoxContainer.get_children().size())
+	for i in $ScrollContainer/skills/VBoxContainer.get_children().size():
+		for meow in $ScrollContainer/skills/VBoxContainer.get_child(i).get_children():
+			if meow is Label:
+				meow.autowrap_mode = true
+				if idforhopeful[i] != 1:
+					meow.text+= "\n"
+					idforhopeful[i] = 1
+
 func _on_option_button_item_selected(index):
+	$ScrollContainer/skills/VBoxContainer.visible = true
 	var string
 	for VBoxContainer in get_tree().get_nodes_in_group("skill"):
 		VBoxContainer.visible = false

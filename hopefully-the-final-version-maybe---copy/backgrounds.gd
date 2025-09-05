@@ -154,6 +154,8 @@ func _on_backrgounds_item_selected(index):
 	$"../Species/SpeciesOption"._update_APs()
 	Global.the_variable()
 	$"../ATK/Label2".text = str(Global.ATK)
+	if Global.fist_atk_buff > 0:
+		$"../ATK/Label2".text += "   (bare handed atk bonus (including AP):)" + str(Global.ATK + Global.fist_atk_buff + Global.Body)
 
 
 func _on_criminal_item_selected(index):

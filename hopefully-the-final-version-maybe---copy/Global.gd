@@ -123,9 +123,13 @@ var melee = 1
 var dodge = 0
 var cs = 0
 var wpn_buff = 0
+var unarmoured_cc_b = 0
+var light_cc_b = 0
+var heavy_cc_b = 0
 # implement these l8er
 
 var atk_ex_buff = 0
+var fist_atk_buff = 0
 
 func the_variable():
 	var ALL_OF_THEM = [Global.intel, Global.wis, Global.prc, Global.stl, Global.prs, Global.cha, Global.str, Global.ath, Global.hlth, Global.fth, Global.mgc, Global.life]
@@ -141,6 +145,9 @@ func the_variable():
 signal score_changed(AP)
 signal resistance()
 signal complete_update()
+signal unarmour()
+signal light_ar()
+signal heavy_ar()
 
 var AP := 0:
 	set(value):
