@@ -980,29 +980,29 @@ var numberberererere = 0
 func _on_lv_5_assassin_item_selected(index):
 	if !numberberererere == 2:
 		match index:
-			0:
-				string = "Sabotage: Roll Stealth Challenge against an enemy within 2m of you, on a success you can choose one item or armour they have equipped or have on their person and Sabotage that equipment. The next time they use that item it will fall apart, does not work if the item is non magical or one solid piece."
 			1:
-				string = "Thievery: When hitting a Superior attack on an enemy you can also steal one item that is not currently equipped or worn by them."
+				string = "Sabotage: Roll Stealth Challenge against an enemy within 2m of you, on a success you can choose one item or armour they have equipped or have on their person and Sabotage that equipment. The next time they use that item it will fall apart, does not work if the item is non magical or one solid piece."
 			2:
-				string = "Just a Scratch: When rolling a poor on an attack roll with a weapon you can turn your damage into Poison (2)."
+				string = "Thievery: When hitting a Superior attack on an enemy you can also steal one item that is not currently equipped or worn by them."
 			3:
-				string = "Quickstep: You can now move 5m after attacking for free if you rolled a Success or higher."
+				string = "Just a Scratch: When rolling a poor on an attack roll with a weapon you can turn your damage into Poison (2)."
 			4:
-				string = "Noted: If you beat an enemy in a Wisdom Challenge you can learn one weakness, resistance or immunity for 2 IP."
+				string = "Quickstep: You can now move 5m after attacking for free if you rolled a Success or higher."
 			5:
-				string = "Retaliation: All attacks used during a reaction cannot fail and are bumped up to a minimum of a poor."
+				string = "Noted: If you beat an enemy in a Wisdom Challenge you can learn one weakness, resistance or immunity for 2 IP."
 			6:
-				string = "Pinprick: You have three hair sized needles per long rest, the needles can be applied for free upon a Great Melee Attack or you can use Intelligence to hit them from up to 5m away. Once someone has been struck with the pinprick they begin to take 10 Poison (5) damage."
+				string = "Retaliation: All attacks used during a reaction cannot fail and are bumped up to a minimum of a poor."
 			7:
-				string = "Silence: When attacking an enemy while stealthed, if you roll a success or above no other enemies are alerted by the attack."
+				string = "Pinprick: You have three hair sized needles per long rest, the needles can be applied for free upon a Great Melee Attack or you can use Intelligence to hit them from up to 5m away. Once someone has been struck with the pinprick they begin to take 10 Poison (5) damage."
 			8:
-				string = "Versatile Combatant: You’re used to everything, gain a +1 to Attack."
+				string = "Silence: When attacking an enemy while stealthed, if you roll a success or above no other enemies are alerted by the attack."
 			9:
-				string = "Sleep Gas: When using your smoke bombs any enemies within 2m of you must make a Health Check of 13, if they fail they fall unconscious until the start of their next turn."
+				string = "Versatile Combatant: You’re used to everything, gain a +1 to Attack."
 			10:
-				string = "Accuracy is King: If the enemy is within 10m you can no longer fail a ranged attack."
+				string = "Sleep Gas: When using your smoke bombs any enemies within 2m of you must make a Health Check of 13, if they fail they fall unconscious until the start of their next turn."
 			11:
+				string = "Accuracy is King: If the enemy is within 10m you can no longer fail a ranged attack."
+			12:
 				string = "Lock Picking: You can spend 2 IP to automatically lock pick anything not locked by magic."
 	$"../../VBoxContainer2/ScrollContainer".ability(string)
 	numberberererere += 1

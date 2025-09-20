@@ -1565,7 +1565,7 @@ text = "
 
 
 "
-autowrap_mode = 2
+autowrap_mode = 3
 
 [node name="Control" type="Control" parent="NinePatchRect/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(200, 0)

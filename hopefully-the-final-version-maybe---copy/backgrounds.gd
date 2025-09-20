@@ -81,7 +81,7 @@ func _on_backrgounds_item_selected(index):
 		14:
 			Global.effprs += 3
 			var string = "Law Speak: Law Speak allows you to overwhelm commoners with your knowledge of local or non local law. And most people wouldn't even be smart enough to know if you’re making stuff up. You could use this to argue your way into a building or get people out of a crime scene quickly or maybe even threaten a barkeep to give you free drinks."
-			
+			$"../../VBoxContainer2/ScrollContainer".ability(string)
 		15:
 			Global.cSP += 1
 			Global.mvSP += 1
@@ -115,7 +115,7 @@ func _on_backrgounds_item_selected(index):
 			Global.effcha += 3
 			Global.CC += 1
 			var string = "You Owe Me: You’re a charmer and it shows but your trouble seems to follow you, turns out you owe a lot more people than you thought and they don’t take kindly to I.O.U’s.. for the fourth time."
-			
+			$"../../VBoxContainer2/ScrollContainer".ability(string)
 		21:
 			Global.hSP += 1
 			Global.effhlth += 2
@@ -138,7 +138,7 @@ func _on_backrgounds_item_selected(index):
 			Global.effprc += 1
 		25:
 			Global.effprc += 1
-			#fam with positioning
+			#fam with positioning 
 			Global.effstl += 1
 			Global.effath += 1
 			Global.cs += 2
@@ -162,8 +162,9 @@ func _on_backrgounds_item_selected(index):
 func _on_criminal_item_selected(index):
 	match index:
 		0:
-			pass
-		1:
 			Global.copper += 1500
-	$criminal.disabled = true
+		1:
+			var string = "Criminal: served sentence"
+			$"../../VBoxContainer2/ScrollContainer".ability(string)
+	$criminal.visible = true
 	Global.complete_update.emit()
