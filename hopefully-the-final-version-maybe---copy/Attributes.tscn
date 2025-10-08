@@ -1565,7 +1565,7 @@ text = "
 
 
 "
-autowrap_mode = 3
+autowrap_mode = 2
 
 [node name="Control" type="Control" parent="NinePatchRect/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
@@ -6862,6 +6862,7 @@ autowrap_mode = 2
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species/OptionButton" to="NinePatchRect/VBoxContainer/HBoxContainer" method="_on_option_button_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species/scaveger_mods" to="NinePatchRect/VBoxContainer/HBoxContainer" method="_on_scaveger_mods_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species/scaveger_mods" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species/scaveger_mods" method="_on_item_selected"]
+[connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species/fibrosian stuffs" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Species/fibrosian stuffs" method="_on_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/DomainOption" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_domain_option_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/betrayal assassin" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_betrayal_assassin_item_selected"]
 [connection signal="item_selected" from="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain/Talents" to="NinePatchRect/VBoxContainer/HBoxContainer/VBoxContainer/Domain" method="_on_talents_item_selected"]

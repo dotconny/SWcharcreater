@@ -18,14 +18,14 @@ func _on_item_selected(index):
 			Global.SP += 1
 			var old = "+10"
 			var new = "+20"
-			$"../../../ScrollContainer".new_splice(old, new)
+			$"../../../VBoxContainer2/ScrollContainer".new_splice(old, new)
 		2:
 			Global.effstl += 4
 			var old = "Spend 3 IP"
 			var new = "Spend 2 IP"
-			$"../../../ScrollContainer".new_splice(old, new)
+			$"../../../VBoxContainer2/ScrollContainer".new_splice(old, new)
 		3:
-			$"../../../ScrollContainer".ability("Deal BD when grappling or being grappled in piercing")
+			$"../../../VBoxContainer2/ScrollContainer".ability("Deal BD when grappling or being grappled in piercing")
 			$"../../BD/typing".text = "(Poison (1) )"
 			#skill
 		4:
@@ -40,7 +40,7 @@ func _on_item_selected(index):
 		6:
 			var old = "direct sunlight"
 			var new = "complete darkness"
-			$"../../../ScrollContainer".new_splice(old, new)
+			$"../../../VBoxContainer2/ScrollContainer".new_splice(old, new)
 			Global.dark_vis = 9223372036854775807
 			Global.poison_res += 2
 			Global.bleed_res += 2
@@ -48,9 +48,10 @@ func _on_item_selected(index):
 			Global.swim += 10
 			var old = "direct sunlight"
 			var new = "in water"
-			$"../../../ScrollContainer".new_splice(old, new)
+			$"../../../VBoxContainer2/ScrollContainer".new_splice(old, new)
 			$"../../HP/HP buff".text = "receive double healing"
 		8:
 			var ability = "Moss - Grapples always succeed"
-			$"../../../ScrollContainer".ability(ability)
+			$"../../../VBoxContainer2/ScrollContainer".ability(ability)
 			Global.moss = true
+	$".".disabled = true
