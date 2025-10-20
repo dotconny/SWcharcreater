@@ -338,6 +338,7 @@ Upgrade: Silent Killer - If you attack an enemy while stealthed, roll Rigged."
 						potplv5 = ["","Diamond Skin","An Oath Remains","Brick Wall"]
 						for item in potplv5:
 							$potplv5.add_item(item)
+						$potplv5.visible = true
 						opt()
 					6:
 						string = "Ability: Shielding - if an ally is within Level x 3 Metres of you redirect all damage they take towards you."
@@ -737,7 +738,6 @@ func _on_subclass_item_selected(index):
 	sub_ID = index
 	match index:
 		0:
-			$subclasswarrior.visible = false
 			string = "Ability: Fury - Fury is a special resource you get as a warrior's spirit, you get 3 Fury at the start of combat that can be spent to gain a free bonus attack that costs no IP to use, you gain more Fury as you level up"
 			Global.SP += 2
 		1:
@@ -766,20 +766,10 @@ All APs in Health heighten your HP by 2x the original amount\n\nAbility: Protect
 			Global.HP += 10
 			Global.cs += 5
 			Global.sub = true
-			string = "Ability: War Cry! - You can now shout out war cries, allowing you to give your allies orders which give them buffs if they follow after you:
-
-Attack Cry - If your allies only attack on their turn they gain a +3 to hit.
-Defence Cry - If your allies defend on their turn they get a +15 to their shield health.
-Retreat Cry - If your allies move on their turn they gain a +10 to their movement.
-Recover Cry - If your allies heal on their turn, they heal a bonus +20 health.
-
-You can only use 1 cry a turn.
-
-Passive: Imposing - You gain familiarity with all Persuasion/Intimidation based weapons.
-
-Passive: Commanders Presence - You can now add half your Intimidation Bonus to your BD."
+			string = "Ability: War Cry! - You can now shout out war cries, allowing you to give your allies orders which give them buffs if they follow after you:\n\nAttack Cry - If your allies only attack on their turn they gain a +3 to hit.\nDefence Cry - If your allies defend on their turn they get a +15 to their shield health.\nRetreat Cry - If your allies move on their turn they gain a +10 to their movement.\nRecover Cry - If your allies heal on their turn, they heal a bonus +20 health.\n\nYou can only use 1 cry a turn.\n\nPassive: Imposing - You gain familiarity with all Persuasion/Intimidation based weapons.\n\nPassive: Commanders Presence - You can now add half your Intimidation Bonus to your BD."
 	$"../../VBoxContainer2/ScrollContainer".ability(string)
 	$"../Species/SpeciesOption".update()
+	$subclasswarrior.visible = false
 
 func _on_subclassassassin_item_selected(index: int) -> void:
 	if index < 4:

@@ -161,10 +161,10 @@ func _on_backrgounds_item_selected(index):
 
 func _on_criminal_item_selected(index):
 	match index:
-		0:
-			Global.copper += 1500
 		1:
+			Global.copper += 1500
+		2:
 			var string = "Criminal: served sentence"
 			$"../../VBoxContainer2/ScrollContainer".ability(string)
-	$criminal.visible = true
+	$criminal.visible = false
 	Global.complete_update.emit()

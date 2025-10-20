@@ -11,7 +11,7 @@ func _on_plus_pressed():
 
 func _on_minus_pressed():
 	Global.walk -= 1
-	$num.text = str(Global.walk)
+	$num.text = str(Global.walk*(Global.military+1))
 	Global.move_i += 1
 	print(Global.move_i)
 	if Global.move_i >= 0:
